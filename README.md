@@ -1,43 +1,95 @@
-# Astro Starter Kit: Minimal
+# Captain Jack Website
 
-```sh
-npm create astro@latest -- --template minimal
+## Projektübersicht
+
+Multi-Page Website für Captain Jack - Bootslagerung, Parking und Keelcrab Service in Preveza, Griechenland.
+
+## Tech Stack
+
+- **Framework:** Astro 5.x
+- **Styling:** Tailwind CSS 4.x
+- **Deployment:** Netlify
+
+## Seiten
+
+- **Startseite** (`/`) - Hero, Services Overview, Keelcrab Highlight, FAQ
+- **Storage** (`/storage`) - Trockenlagerung, Preise (38€/m³, 225€/Auto)
+- **Parking** (`/parking`) - Freie Stellplätze (125€/Boot), überdacht ab Winter 2026
+- **Service** (`/service`) - Serviceleistungen (Details folgen)
+- **Keelcrab** (`/keelcrab`) - Exklusiver Partner, 5 Key Points, Preise
+- **Kontakt** (`/kontakt`) - Gosia Kontaktdaten, Standort
+- **Impressum** (`/impressum`) - Rechtliche Angaben
+- **Datenschutz** (`/datenschutz`) - Datenschutzerklärung
+
+## Features
+
+- ✅ Mobile-first responsive Design
+- ✅ SEO-optimierte Struktur
+- ✅ FAQ-Bereich mit Accordion
+- ✅ Kontaktdaten für Gosia (DE + GR)
+- ✅ Kein Festnetz, WhatsApp verfügbar
+- ✅ Standort: Preveza Stadthafen (nicht Marina)
+- ✅ Google Business ready
+- ✅ Placeholder-Bilder für Kundenfotos
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+
+# Build for production
+npm run build
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Deployment
 
-## 🚀 Project Structure
+Für Netlify-Deployment:
 
-Inside of your Astro project, you'll see the following folders and files:
+```bash
+# Option 1: Netlify CLI (mit Login)
+netlify login
+netlify deploy --prod --dir=dist
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+# Option 2: Netlify Git Integration
+# Connect GitHub/GitLab repository in Netlify dashboard
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## To-Do (nach Kundenfeedback)
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- [ ] Echte Bilder einbauen (Gebäude, Team, Keelcrab Maschine)
+- [ ] Google Maps einbinden
+- [ ] Firmendaten für Impressum vervollständigen
+- [ ] Google Business Reviews integrieren
+- [ ] Kundenbewertungen mit Bootsdetails
+- [ ] Terminbuchungssystem (falls gewünscht)
+- [ ] Service-Details mit Sascha klären
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Struktur
 
-## 🧞 Commands
+```
+src/
+├── components/
+│   ├── Navigation.astro    # Mobile + Desktop Navigation
+│   └── Footer.astro          # Footer mit Kontaktdaten
+├── layouts/
+│   └── Layout.astro          # Basis-Layout mit SEO
+├── pages/
+│   ├── index.astro           # Startseite
+│   ├── storage.astro         # Storage Seite
+│   ├── parking.astro         # Parking Seite
+│   ├── service.astro         # Service Seite
+│   ├── keelcrab.astro        # Keelcrab Seite
+│   ├── kontakt.astro         # Kontakt Seite
+│   ├── impressum.astro       # Impressum
+│   └── datenschutz.astro     # Datenschutz
+└── styles/
+    └── global.css            # Tailwind Import
+```
 
-All commands are run from the root of the project, from a terminal:
+## Lizenz
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+© 2026 Captain Jack - Alle Rechte vorbehalten
