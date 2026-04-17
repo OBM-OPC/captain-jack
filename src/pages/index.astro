@@ -1,228 +1,255 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Navigation from "../components/Navigation.astro";
-import Footer from "../components/Footer.astro";
 ---
 
-<Layout title="Startseite" description="Captain Jack - Ihr zuverlässiger Partner für Bootslagerung, Parking und Keelcrab Rumpfreinigung in Preveza, Griechenland">
-  <Navigation />
+<Layout title="Bootslagerung & Keelcrab Service Preveza" description="Captain Jack - Moderne Bootslagerung und smarter Bootsservice in Preveza. Exklusive Keelcrab®-Technologie in Griechenland.">
+  <!-- Header -->
+  <header class="bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logo - higher positioned -->
+        <a href="/" class="flex items-center -mt-2">
+          <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center shadow-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2.5 8.5l2.5 3.5L9 9l4 6 3.5-2.5L22 19"></path>
+              <path d="M22 13a9 9 0 1 1-9-9 9 9 0 0 1 9 9Z"></path>
+              <path d="M7 4h10v3H7z"></path>
+            </svg>
+          </div>
+          <span class="ml-3 text-xl font-bold text-gray-900">Captain Jack</span>
+        </a>
+
+        <!-- Phone number -->
+        <a href="tel:+302682012345" class="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+          </svg>
+          <span class="font-medium">+30 26820 12345</span>
+        </a>
+      </div>
+    </div>
+  </header>
 
   <!-- Hero Section -->
-  <section class="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white overflow-hidden">
-    <div class="absolute inset-0 opacity-20">
-      <div class="absolute inset-0 bg-[url('/images/hero-bg.jpg')] bg-cover bg-center"></div>
-    </div>
+  <section class="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
+    <div class="absolute inset-0 bg-[url('/images/hero-bg.jpg')] bg-cover bg-center opacity-10"></div>
     
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div class="space-y-8">
-          <div class="inline-flex items-center px-4 py-2 bg-blue-700/50 rounded-full text-sm font-medium text-blue-100">
-            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-            Exklusiver Keelcrab Partner Griechenland
-          </div>
-          
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-            Ihr Boot <span class="text-blue-300">in sicheren Händen</span>
-          </h1>
-          
-          <p class="text-xl text-blue-100 max-w-xl">
-            Professionelle Bootslagerung, sicheres Parking und innovative Keelcrab Rumpfreinigung in Preveza – Ihr Partner für den perfekten Bootsschutz.
-          </p>
-          
-          <div class="flex flex-wrap gap-4">
-            <a href="#leistungen" class="inline-flex items-center px-6 py-3 bg-white text-blue-900 font-semibold rounded-lg hover:bg-blue-50 transition-colors shadow-lg">
-              Unsere Leistungen
-              <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </a>
-            <a href="/kontakt" class="inline-flex items-center px-6 py-3 bg-blue-700 text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors border border-blue-500">
-              Termin vereinbaren
-            </a>
-          </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="max-w-3xl mx-auto text-center">
+        <!-- Badge -->
+        <div class="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium text-blue-200 mb-6">
+          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          200+ zufriedene Bootsbesitzer
         </div>
-
-        <div class="hidden lg:block">
-          <div class="relative">
-            <div class="aspect-square rounded-2xl bg-gradient-to-br from-blue-400/20 to-blue-600/20 backdrop-blur-sm flex items-center justify-center border border-white/10">
-              <!-- Placeholder for hero image -->
-              <div class="text-center p-8">
-                <div class="w-64 h-64 mx-auto bg-blue-800/50 rounded-full flex items-center justify-center border-4 border-blue-400/30">
-                  <svg class="w-32 h-32 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                  </svg>
-                </div>
-                <p class="mt-4 text-blue-200 text-sm">Bild: Keelcrab Rumpfreinigung</p>
-              </div>
-            </div>
-          </div>
+        
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+          Moderne Bootslagerung und smarter Bootsservice in Preveza
+        </h1>
+        
+        <p class="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+          Bootslagerung & Keelcrab® Unterwasserreinigung in Preveza. Ohne Kran, ohne Wartezeit – direkt im Wasser.
+        </p>
+        
+        <!-- Badge -->
+        <div class="inline-flex items-center px-4 py-2 bg-amber-500/20 border border-amber-500/30 rounded-full text-sm font-medium text-amber-300">
+          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          Exklusive Keelcrab®-Technologie in Griechenland
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Overview -->
-  <section id="leistungen" class="py-20 bg-white">
+  <!-- Service Cards -->
+  <section id="services" class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Unsere Leistungen</h2>
-        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Alles für Ihr Boot – von der sicheren Lagerung bis zur professionellen Unterwasser-Reinigung</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- Storage -->
-        <a href="/storage" class="group block">
-          <div class="bg-gray-50 rounded-2xl p-8 h-full transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
-            <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">Storage</h3>
-            <p class="text-gray-600 mb-4">Klimatisierte Trockenlagerung mit 24/7 Überwachung für maximale Sicherheit.</p>
-            <span class="text-blue-600 font-medium flex items-center">
-              Mehr erfahren
-              <svg class="ml-1 w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
-            </span>
-          </div>
-        </a>
-
-        <!-- Parking -->
-        <a href="/parking" class="group block">
-          <div class="bg-gray-50 rounded-2xl p-8 h-full transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
-            <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 7m0 13V7"/>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">Parking</h3>
-            <p class="text-gray-600 mb-4">Sichere Stellplätze für Boote bis 8m – auch überdacht ab Winter 2026.</p>
-            <span class="text-green-600 font-medium flex items-center">
-              Mehr erfahren
-              <svg class="ml-1 w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
-            </span>
-          </div>
-        </a>
-
-        <!-- Service -->
-        <a href="/service" class="group block">
-          <div class="bg-gray-50 rounded-2xl p-8 h-full transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
-            <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">Service</h3>
-            <p class="text-gray-600 mb-4">Professionelle Wartung und saisonale Inspektionen für Ihr Boot.</p>
-            <span class="text-amber-600 font-medium flex items-center">
-              Mehr erfahren
-              <svg class="ml-1 w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
-            </span>
-          </div>
-        </a>
-
-        <!-- Keelcrab -->
-        <a href="/keelcrab" class="group block">
-          <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 h-full transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1 border-2 border-blue-100">
-            <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">Keelcrab</span></h3>
-            <p class="text-gray-600 mb-4">Innovative Rumpfreinigung im Wasser – ohne Heben, ohne Chemie, mit Ergebnis.</p>
-            <span class="text-blue-600 font-medium flex items-center">
-              Mehr erfahren
-              <svg class="ml-1 w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
-            </span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Keelcrab Highlight -->
-  <section class="py-20 bg-gradient-to-br from-blue-900 to-blue-800 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <div class="inline-flex items-center px-4 py-2 bg-blue-700/50 rounded-full text-sm font-medium mb-6">
-            Exklusiv in Griechenland
-          </div>
-          <h2 class="text-3xl md:text-4xl font-bold mb-6">Keelcrab – Die Zukunft der Rumpfreinigung</h2>
-          
-          <div class="space-y-4">
-            <div class="flex items-start gap-4">
-              <div class="w-6 h-6 bg-green-500 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
-                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                </svg>
-              </div>
-              <p>Reinigung im Wasser – Ihr Boot bleibt liegen</p>
-            </div>
-            <div class="flex items-start gap-4">
-              <div class="w-6 h-6 bg-green-500 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
-                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                </svg>
-              </div>
-              <p>Keine Chemikalien – umweltfreundlich</p>
-            </div>
-            <div class="flex items-start gap-4">
-              <div class="w-6 h-6 bg-green-500 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
-                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                </svg>
-              </div>
-              <p>Schonend für Rumpfgelcoat</p>
-            </div>
-            <div class="flex items-start gap-4">
-              <div class="w-6 h-6 bg-green-500 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
-                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                </svg>
-              </div>
-              <p>Nur 800 Watt Stromverbrauch</p>
-            </div>
-            <div class="flex items-start gap-4">
-              <div class="w-6 h-6 bg-green-500 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
-                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                </svg>
-              </div>
-              <p>20-30% Kraftstoffeinsparung</p>
-            </div>
-          </div>
-
-          <a href="/keelcrab" class="inline-flex items-center mt-8 px-6 py-3 bg-white text-blue-900 font-semibold rounded-lg hover:bg-blue-50 transition-colors">
-            Alle Vorteile entdecken
-            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
+          <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
             </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Storage</h3>
+          <p class="text-gray-600 mb-4">Sichere Trockenlagerung mit 24/7 Überwachung und klimatisierter Lagerhalle.</p>
+          <a href="#storage-section" class="text-blue-600 font-medium flex items-center hover:text-blue-700">
+            Mehr erfahren →
           </a>
         </div>
 
+        <!-- Parking -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
+          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Parking</h3>
+          <p class="text-gray-600 mb-4">Überdachte Stellplätze für Boote und Camper mit direktem Hafenzugang.</p>
+          <a href="#parking-section" class="text-blue-600 font-medium flex items-center hover:text-blue-700">
+            Mehr erfahren →
+          </a>
+        </div>
+
+        <!-- Service -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
+          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826 2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Service</h3>
+          <p class="text-gray-600 mb-4">Professionelle Wartung, Reparaturen und saisonale Inspektionen vor Ort.</p>
+          <a href="#service-section" class="text-blue-600 font-medium flex items-center hover:text-blue-700">
+            Mehr erfahren →
+          </a>
+        </div>
+
+        <!-- Technologie -->
+        <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow border border-blue-100">
+          <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Technologie</h3>
+          <p class="text-gray-600 mb-4">Keelcrab® Unterwasserreinigung und Drohnen-Inspektion mit Live-Bericht.</p>
+          <a href="#keelcrab" class="text-blue-600 font-medium flex items-center hover:text-blue-700">
+            Mehr erfahren →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem-Solution Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Problem 1 -->
+        <div class="bg-gray-50 rounded-2xl p-8 text-center">
+          <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Kein sicherer Stellplatz</h3>
+          <p class="text-gray-600 mb-6">Der Heimathafen ist überfüllt, Trockendocks kostspielig. Wo lässt sich mein Boot wirklich gut aufbewahren?</p>
+          <button class="solution-btn px-6 py-3 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 transition-colors" data-target="solution-1">
+            Lösung anzeigen
+          </button>
+          <div id="solution-1" class="hidden mt-6 p-4 bg-amber-50 rounded-lg text-amber-800 text-sm">
+            Unsere klimatisierte Lagerhalle mit 24/7 Überwachung bietet maximalen Schutz für Ihr Boot.
+          </div>
+        </div>
+
+        <!-- Problem 2 -->
+        <div class="bg-gray-50 rounded-2xl p-8 text-center">
+          <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Rumpf voller Bewuchs</h3>
+          <p class="text-gray-600 mb-6">Kran-Termine dauern Wochen. Der Rumpf verrottet im Hafen. Reinigen ist teuer und zeitaufwendig.</p>
+          <button class="solution-btn px-6 py-3 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 transition-colors" data-target="solution-2">
+            Lösung anzeigen
+          </button>
+          <div id="solution-2" class="hidden mt-6 p-4 bg-amber-50 rounded-lg text-amber-800 text-sm">
+            Keelcrab® reinigt direkt im Wasser – ohne Kran, ohne Wartezeit, bis zu 70% günstiger als traditionelle Methoden.
+          </div>
+        </div>
+
+        <!-- Problem 3 -->
+        <div class="bg-gray-50 rounded-2xl p-8 text-center">
+          <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Viele Anbieter, kein Überblick</h3>
+          <p class="text-gray-600 mb-6">Lager hier, Service dort, Dokumentation woanders. Fragmentierte Betreuung statt ganzheitlicher Lösung.</p>
+          <button class="solution-btn px-6 py-3 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 transition-colors" data-target="solution-3">
+            Lösung anzeigen
+          </button>
+          <div id="solution-3" class="hidden mt-6 p-4 bg-amber-50 rounded-lg text-amber-800 text-sm">
+            Bei Captain Jack bekommen Sie alles aus einer Hand: Lagerung, Service, Reinigung und digitale Dokumentation.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USP Section (Keelcrab) -->
+  <section id="keelcrab" class="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <!-- Badge -->
+          <div class="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium text-blue-200 mb-6">
+            Unser USP
+          </div>
+          
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">Keelcrab® – Revolutionär einfach</h2>
+          
+          <p class="text-slate-300 text-lg mb-8">
+            Die weltweit erste automatische Unterwasserreinigung für Yachten. Direkt am Liegeplatz – ohne Kran, ohne Trockendock, ohne Wartezeit.
+          </p>
+
+          <ul class="space-y-4">
+            <li class="flex items-start gap-4">
+              <div class="w-6 h-6 bg-emerald-500 rounded-full flex-shrink-0 flex items-center justify-center mt-1">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span>Reinigung im Wasser, Boot bleibt liegen</span>
+            </li>
+            <li class="flex items-start gap-4">
+              <div class="w-6 h-6 bg-emerald-500 rounded-full flex-shrink-0 flex items-center justify-center mt-1">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span>Bis zu 70% günstiger als konventionelle Methoden</span>
+            </li>
+            <li class="flex items-start gap-4">
+              <div class="w-6 h-6 bg-emerald-500 rounded-full flex-shrink-0 flex items-center justify-center mt-1">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span>Keine Chemikalien notwendig – umweltfreundlich</span>
+            </li>
+            <li class="flex items-start gap-4">
+              <div class="w-6 h-6 bg-emerald-500 rounded-full flex-shrink-0 flex items-center justify-center mt-1">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span>Schonend für Rumpfgelcoat und Umwelt</span>
+            </li>
+          </ul>
+
+          <!-- Badge -->
+          <div class="mt-8 inline-flex items-center px-4 py-2 bg-amber-500/20 border border-amber-500/30 rounded-full text-sm font-medium text-amber-300">
+            Exklusiv in Preveza
+          </div>
+        </div>
+
         <div class="relative">
-          <div class="aspect-[4/3] rounded-2xl bg-gradient-to-br from-blue-400/20 to-cyan-400/20 backdrop-blur-sm flex items-center justify-center border border-white/20">
-            <!-- Placeholder for Keelcrab image -->
+          <div class="aspect-square rounded-2xl bg-gradient-to-br from-blue-400/20 to-cyan-400/20 backdrop-blur-sm flex items-center justify-center border border-white/10">
             <div class="text-center p-8">
               <div class="w-48 h-48 mx-auto bg-blue-800/50 rounded-2xl flex items-center justify-center border-2 border-blue-400/30">
                 <svg class="w-24 h-24 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                 </svg>
               </div>
-              <p class="mt-4 text-blue-200">Bild: Keelcrab Maschine</p>
+              <p class="mt-4 text-slate-400 text-sm">Keelcrab® Technologie</p>
             </div>
           </div>
         </div>
@@ -230,107 +257,296 @@ import Footer from "../components/Footer.astro";
     </div>
   </section>
 
-  <!-- FAQ Section -->
+  <!-- 4 Feature Icons -->
+  <section class="py-16 bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-gray-900">Schonend fürs Gelcoat</h4>
+        </div>
+
+        <div class="text-center">
+          <div class="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-gray-900">75% günstiger</h4>
+        </div>
+
+        <div class="text-center">
+          <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-gray-900">Volle Sichtbarkeit</h4>
+        </div>
+
+        <div class="text-center">
+          <div class="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-gray-900">Sofort einsatzbereit</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Exklusiv in Griechenland Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full text-sm font-medium text-blue-700 mb-6">
+          Exklusiv in Griechenland
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Ihr exklusiver Keelcrab® Partner in Preveza</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Als einer der wenigen autorisierten Keelcrab® Partner in ganz Griechenland bieten wir Ihnen Zugang zu revolutionärer Unterwasserreinigungstechnologie – direkt hier in Preveza.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+          <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-gray-900 mb-2">Autorisierter Partner</h4>
+          <p class="text-sm text-gray-600">Zertifizierte Keelcrab® Technologie</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-gray-900 mb-2">Ideale Lage</h4>
+          <p class="text-sm text-gray-600">Direkt in der Marina von Preveza</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+          <div class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-gray-900 mb-2">Ionische Küste</h4>
+          <p class="text-sm text-gray-600">Perfekte Bedingungen für Bootsreinigung</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-gray-900 mb-2">Langjährige Erfahrung</h4>
+          <p class="text-sm text-gray-600">Spezialisiert auf Mittelmeer-Bedingungen</p>
+        </div>
+      </div>
+
+      <!-- Location Info -->
+      <div class="mt-12 bg-white rounded-2xl p-8 shadow-sm">
+        <div class="flex flex-col md:flex-row items-center gap-6">
+          <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold text-gray-900 mb-1">Preveza Marina</h4>
+            <p class="text-gray-600">Preveza Marina, 481 00 Preveza, Griechenland</p>
+            <div class="flex flex-wrap gap-4 mt-2 text-sm text-gray-500">
+              <span class="flex items-center gap-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                Geschützte Lage in der Ambrakischen Bucht
+              </span>
+              <span class="flex items-center gap-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                Schneller Zugang zu den Ionischen Inseln
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3-Step Process -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">So einfach geht's</h2>
+        <p class="text-xl text-gray-600">In drei Schritten zum sauberen Boot</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Step 1 -->
+        <div class="relative">
+          <div class="text-8xl font-bold text-gray-100 absolute -top-6 left-0">01</div>
+          <div class="relative pt-8">
+            <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Termin online buchen</h3>
+            <p class="text-gray-600">Wählen Sie Ihren Wunschtermin. Wir übernehmen die gesamte Planung – schnell, unkompliziert und perfekt organisiert.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative">
+          <div class="text-8xl font-bold text-gray-100 absolute -top-6 left-0">02</div>
+          <div class="relative pt-8">
+            <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Boot abgeben – wir erledigen den Rest</h3>
+            <p class="text-gray-600">Bringen Sie Ihr Boot vorbei. Wir kümmern uns um Positionierung, Reinigung und Qualitätskontrolle – Sie müssen nichts tun.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative">
+          <div class="text-8xl font-bold text-gray-100 absolute -top-6 left-0">03</div>
+          <div class="relative pt-8">
+            <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Abholen & Lossegeln</h3>
+            <p class="text-gray-600">Ihr Boot glänzt wie neu – mit detaillierter Dokumentation. Keine Trockenzeit, keine Wartezeit. Sofort segelfertig!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
   <section id="faq" class="py-20 bg-gray-50">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Häufige Fragen</h2>
-        <p class="text-xl text-gray-600">Alles, was Sie über unsere Dienstleistungen wissen sollten</p>
       </div>
 
       <div class="space-y-4">
         <!-- FAQ Item 1 -->
-        <div class="bg-white rounded-xl p-6 shadow-sm">
-          <button class="faq-toggle w-full flex justify-between items-center text-left" aria-expanded="false">
-            <span class="font-semibold text-gray-900">Wie hoch sind die Preise für Storage?</span>
+        <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+          <button class="faq-toggle w-full flex justify-between items-center p-6 text-left" aria-expanded="false">
+            <span class="font-semibold text-gray-900">Wie funktioniert die Keelcrab-Reinigung?</span>
             <svg class="faq-icon w-5 h-5 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
-          <div class="faq-content hidden mt-4 text-gray-600">
-            <p>Unsere Storage-Preise: <strong>38 €/m³ für Boxen</strong> und <strong>225 €/Monat für Autos (innen)</strong>. Die Mindestlaufzeit beträgt 1 Monat.</p>
+          <div class="faq-content hidden px-6 pb-6 text-gray-600">
+            <p>Der Keelcrab ist ein automatisches Reinigungsgerät, das direkt am Rumpf Ihres Bootes arbeitet – während es im Wasser liegt. Es "krabbelt" entlang des Rumpfes und entfernt Algen, Muscheln und andere Ablagerungen schonend. Sie brauchen keinen Kran und kein Trockendock.</p>
           </div>
         </div>
 
         <!-- FAQ Item 2 -->
-        <div class="bg-white rounded-xl p-6 shadow-sm">
-          <button class="faq-toggle w-full flex justify-between items-center text-left" aria-expanded="false">
-            <span class="font-semibold text-gray-900">Wo genau befindet sich Captain Jack?</span>
+        <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+          <button class="faq-toggle w-full flex justify-between items-center p-6 text-left" aria-expanded="false">
+            <span class="font-semibold text-gray-900">Wie sicher ist die Bootslagerung?</span>
             <svg class="faq-icon w-5 h-5 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
-          <div class="faq-content hidden mt-4 text-gray-600">
-            <p>Wir befinden uns am <strong>Preveza Stadthafen</strong>, Leofóros Ioanninon 215. Ab nächster Woche haben wir auch einen zweiten Standort in der Preveza Marina.</p>
+          <div class="faq-content hidden px-6 pb-6 text-gray-600">
+            <p>Unsere Einrichtung verfügt über 24/7 Videoüberwachung, elektronische Zutrittskontrolle und eine Alarmanlage. Die trockene Lagerung in unserer klimatisierten Halle schützt Ihr Boot zusätzlich vor Witterungseinflüssen.</p>
           </div>
         </div>
 
         <!-- FAQ Item 3 -->
-        <div class="bg-white rounded-xl p-6 shadow-sm">
-          <button class="faq-toggle w-full flex justify-between items-center text-left" aria-expanded="false">
-            <span class="font-semibold text-gray-900">Wie kann ich einen Termin für Keelcrab buchen?</span>
+        <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+          <button class="faq-toggle w-full flex justify-between items-center p-6 text-left" aria-expanded="false">
+            <span class="font-semibold text-gray-900">Wie lange dauert ein Service-Termin?</span>
             <svg class="faq-icon w-5 h-5 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
-          <div class="faq-content hidden mt-4 text-gray-600">
-            <p>Am einfachsten erreichen Sie uns per WhatsApp oder Telefon: <strong>Gosia +30 698 447 7868</strong>. Wir bieten auch mobilen Service an – wir kommen direkt zu Ihrem Boot, auch bei Ankerplätzen!</p>
+          <div class="faq-content hidden px-6 pb-6 text-gray-600">
+            <p>Die Keelcrab-Reinigung dauert je nach Bootgröße zwischen 1-3 Stunden. Wir koordinieren den Termin so, dass Sie zeitnah dran sind – oft noch am selben Tag der Anfrage.</p>
           </div>
         </div>
 
         <!-- FAQ Item 4 -->
-        <div class="bg-white rounded-xl p-6 shadow-sm">
-          <button class="faq-toggle w-full flex justify-between items-center text-left" aria-expanded="false">
-            <span class="font-semibold text-gray-900">Wie lange dauert die Keelcrab-Reinigung?</span>
+        <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+          <button class="faq-toggle w-full flex justify-between items-center p-6 text-left" aria-expanded="false">
+            <span class="font-semibold text-gray-900">Bieten Sie auch Camper-Stellplätze an?</span>
             <svg class="faq-icon w-5 h-5 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
-          <div class="faq-content hidden mt-4 text-gray-600">
-            <p>Die Reinigung dauert ca. <strong>1-3 Stunden</strong>, je nach Bootslänge und Verschmutzungsgrad. Der Preis wird nach Länge berechnet, nicht nach Stunde.</p>
-          </div>
-        </div>
-
-        <!-- FAQ Item 5 -->
-        <div class="bg-white rounded-xl p-6 shadow-sm">
-          <button class="faq-toggle w-full flex justify-between items-center text-left" aria-expanded="false">
-            <span class="font-semibold text-gray-900">Bietet ihr Service auch für Charterflotten an?</span>
-            <svg class="faq-icon w-5 h-5 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
-          </button>
-          <div class="faq-content hidden mt-4 text-gray-600">
-            <p>Ja! Für Charter Companies bieten wir <strong>Sonderkonditionen</strong> an. Unser Keelcrab-Service ist ideal für Flotten – superschnell und effizient.</p>
+          <div class="faq-content hidden px-6 pb-6 text-gray-600">
+            <p>Ja! Wir bieten auch sichere Stellplätze für Camper und Wohnmobile an – ideal für die Kombination aus Wohnmobil-Urlaub und Bootsaktivitäten in Preveza.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="py-20 bg-white">
+  <!-- CTA Footer -->
+  <section class="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Bereit für Ihren Termin?</h2>
-      <p class="text-xl text-gray-600 mb-8">Kontaktieren Sie Gosia direkt – wir freuen uns auf Ihr Boot!</p>
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Bereit für professionelle Bootsbetreuung?</h2>
+      <p class="text-xl text-slate-300 mb-8">Lassen Sie sich beraten. Wir finden die passende Lösung für Ihr Boot – ob Storage, Service oder beides.</p>
       
       <div class="flex flex-wrap justify-center gap-4">
-        <a href="tel:+306984477868" class="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-lg">
+        <a href="tel:+302682012345" class="inline-flex items-center px-8 py-4 bg-white text-slate-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors">
           <svg class="mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
             <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
           </svg>
-          +30 698 447 7868
-        </a>
-        <a href="https://wa.me/306984477868" target="_blank" rel="noopener" class="inline-flex items-center px-8 py-4 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors shadow-lg">
-          <svg class="mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 5.834h-.004a9.311 9.311 0 01-21-21c0-3.026.987-5.828 2.657-8.1l-1.423-5.618 5.649 1.42A9.293 9.293 0 0112 2a9.293 9.293 0 019.293 9.293 9.311 9.311 0 01-9.293 9.292z"/>
-          </svg>
-          WhatsApp schreiben
+          +30 26820 12345
         </a>
       </div>
     </div>
   </section>
 
-  <Footer />
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-400 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2.5 8.5l2.5 3.5L9 9l4 6 3.5-2.5L22 19"></path>
+              <path d="M22 13a9 9 0 1 1-9-9 9 9 0 0 1 9 9Z"></path>
+            </svg>
+          </div>
+          <span class="font-semibold text-white">Captain Jack</span>
+        </div>
+        
+        <div class="flex gap-6 text-sm">
+          <a href="#services" class="hover:text-white transition-colors">Leistungen</a>
+          <a href="#keelcrab" class="hover:text-white transition-colors">Keelcrab</a>
+          <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+        </div>
+        
+        <p class="text-sm">© 2025 Captain Jack. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </footer>
 
   <script>
     // FAQ Accordion
@@ -343,6 +559,18 @@ import Footer from "../components/Footer.astro";
         button.setAttribute('aria-expanded', !isExpanded);
         content?.classList.toggle('hidden');
         icon?.classList.toggle('rotate-180');
+      });
+    });
+
+    // Solution buttons
+    document.querySelectorAll('.solution-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-target');
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.classList.toggle('hidden');
+          btn.textContent = target.classList.contains('hidden') ? 'Lösung anzeigen' : 'Lösung ausblenden';
+        }
       });
     });
   </script>
