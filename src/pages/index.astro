@@ -132,60 +132,60 @@ import Layout from "../layouts/Layout.astro";
   </section>
 
   <!-- Problem-Solution Section -->
-  <section class="py-16 bg-white">
+  <section class="py-16" style="background: linear-gradient(135deg, #0A2540 0%, #1a3a5c 50%, #0d2b3a 100%);">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-10">
-        <p class="text-amber-500 text-sm font-medium tracking-wider uppercase mb-3">Kennen Sie das?</p>
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Bootsbesitzer kennen diese Herausforderungen</h2>
+        <p class="text-amber-400 text-sm font-medium tracking-wider uppercase mb-3">Kennen Sie das?</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Bootsbesitzer kennen diese Herausforderungen</h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Problem 1 -->
-        <div class="bg-gray-50 rounded-2xl p-8 text-center">
-          <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/10">
+          <div class="w-16 h-16 bg-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Kein sicherer Stellplatz</h3>
-          <p class="text-gray-600 mb-6">Der Heimathafen ist überfüllt, Trockendocks kostspielig. Wo lässt sich mein Boot wirklich gut aufbewahren?</p>
-          <button class="solution-btn px-6 py-3 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 transition-colors" data-target="solution-1">
+          <h3 class="text-xl font-bold text-white mb-3">Kein sicherer Stellplatz</h3>
+          <p class="text-white/70 mb-6">Der Heimathafen ist überfüllt, Trockendocks kostspielig. Wo lässt sich mein Boot wirklich gut aufbewahren?</p>
+          <button class="solution-btn px-6 py-3 bg-amber-500 text-white rounded-lg font-medium hover:bg-amber-600 transition-colors" data-target="solution-1">
             Lösung anzeigen
           </button>
-          <div id="solution-1" class="hidden mt-6 p-4 bg-amber-50 rounded-lg text-amber-800 text-sm">
+          <div id="solution-1" class="hidden mt-6 p-4 bg-white/10 backdrop-blur-sm rounded-lg text-white/90 text-sm border border-white/10">
             Unsere klimatisierte Lagerhalle mit 24/7 Überwachung bietet maximalen Schutz für Ihr Boot.
           </div>
         </div>
 
         <!-- Problem 2 -->
-        <div class="bg-gray-50 rounded-2xl p-8 text-center">
-          <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/10">
+          <div class="w-16 h-16 bg-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Rumpf voller Bewuchs</h3>
-          <p class="text-gray-600 mb-6">Kran-Termine dauern Wochen. Der Rumpf verrottet im Hafen. Reinigen ist teuer und zeitaufwendig.</p>
-          <button class="solution-btn px-6 py-3 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 transition-colors" data-target="solution-2">
+          <h3 class="text-xl font-bold text-white mb-3">Rumpf voller Bewuchs</h3>
+          <p class="text-white/70 mb-6">Kran-Termine dauern Wochen. Der Rumpf verrottet im Hafen. Reinigen ist teuer und zeitaufwendig.</p>
+          <button class="solution-btn px-6 py-3 bg-amber-500 text-white rounded-lg font-medium hover:bg-amber-600 transition-colors" data-target="solution-2">
             Lösung anzeigen
           </button>
-          <div id="solution-2" class="hidden mt-6 p-4 bg-amber-50 rounded-lg text-amber-800 text-sm">
+          <div id="solution-2" class="hidden mt-6 p-4 bg-white/10 backdrop-blur-sm rounded-lg text-white/90 text-sm border border-white/10">
             Keelcrab® reinigt direkt im Wasser – ohne Kran, ohne Wartezeit, bis zu 70% günstiger als traditionelle Methoden.
           </div>
         </div>
 
         <!-- Problem 3 -->
-        <div class="bg-gray-50 rounded-2xl p-8 text-center">
-          <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/10">
+          <div class="w-16 h-16 bg-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Viele Anbieter, kein Überblick</h3>
-          <p class="text-gray-600 mb-6">Lager hier, Service dort, Dokumentation woanders. Fragmentierte Betreuung statt ganzheitlicher Lösung.</p>
-          <button class="solution-btn px-6 py-3 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 transition-colors" data-target="solution-3">
+          <h3 class="text-xl font-bold text-white mb-3">Viele Anbieter, kein Überblick</h3>
+          <p class="text-white/70 mb-6">Lager hier, Service dort, Dokumentation woanders. Fragmentierte Betreuung statt ganzheitlicher Lösung.</p>
+          <button class="solution-btn px-6 py-3 bg-amber-500 text-white rounded-lg font-medium hover:bg-amber-600 transition-colors" data-target="solution-3">
             Lösung anzeigen
           </button>
-          <div id="solution-3" class="hidden mt-6 p-4 bg-amber-50 rounded-lg text-amber-800 text-sm">
+          <div id="solution-3" class="hidden mt-6 p-4 bg-white/10 backdrop-blur-sm rounded-lg text-white/90 text-sm border border-white/10">
             Bei Captain Jack bekommen Sie alles aus einer Hand: Lagerung, Service, Reinigung und digitale Dokumentation.
           </div>
         </div>
