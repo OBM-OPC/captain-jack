@@ -1,0 +1,105 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Service" description="Professioneller Bootsservice in Preveza. Wartung, Reparaturen und saisonale Inspektionen für Ihr Boot.">
+  <Navigation />
+
+  <!-- Hero -->
+  <section class="relative bg-gradient-to-br from-amber-700 to-amber-800 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <div class="inline-flex items-center px-4 py-2 bg-amber-600/50 rounded-full text-sm font-medium mb-6">
+          Professionelle Betreuung
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Service</h1>
+        <p class="text-xl text-amber-100">Ihr Boot verdient professionelle Betreuung – Saisonstart, Wartung und mehr in Preveza.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Unsere Serviceleistungen</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Von der saisonalen Vorbereitung bis zur regelmäßigen Wartung – wir kümmern uns um Ihr Boot.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="bg-gray-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg">
+          <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826 2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Wartung & Pflege</h3>
+          <p class="text-gray-600">Regelmäßige Inspektionen und Wartungsarbeiten für langfristige Funktionalität Ihres Boots.</p>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-gray-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg">
+          <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Saisonale Inspektionen</h3>
+          <p class="text-gray-600">Professionelle Checks vor und nach der Saison – damit Ihr Boot immer bereit ist.</p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-gray-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg">
+          <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Technische Überprüfung</h3>
+          <p class="text-gray-600">Gründliche Prüfung aller technischen Systeme – von der Elektrik bis zum Motor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coming Soon -->
+  <section class="py-20 bg-amber-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="w-20 h-20 bg-amber-200 rounded-full mx-auto flex items-center justify-center mb-6">
+        <svg class="w-10 h-10 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+      </div>
+      
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">Detaillierte Service-Infos folgen</h2>
+      <p class="text-xl text-gray-600 mb-8">Wir arbeiten daran, Ihnen bald ein umfassendes Service-Angebot zu präsentieren.</p>
+      
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-amber-200">
+        <p class="text-gray-600">Möchten Sie mehr erfahren? Kontaktieren Sie uns direkt – wir beraten Sie gerne zu unseren aktuellen Service-Möglichkeiten.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-amber-600">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+      <h2 class="text-3xl font-bold mb-6">Fragen zu unserem Service?</h2>
+      <p class="text-xl text-amber-100 mb-8">Sprechen Sie uns an – wir finden die beste Lösung für Ihr Boot.</p>
+      
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="tel:+306984477868" class="inline-flex items-center px-8 py-4 bg-white text-amber-600 font-semibold rounded-lg hover:bg-amber-50 transition-colors">
+          Anrufen
+        </a>
+        <a href="/kontakt" class="inline-flex items-center px-8 py-4 bg-amber-700 text-white font-semibold rounded-lg hover:bg-amber-800 transition-colors border border-amber-500">
+          Nachricht schreiben
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
