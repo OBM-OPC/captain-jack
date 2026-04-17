@@ -22,7 +22,19 @@ const { title, description = "Captain Jack - Bootslagerung & Keelcrab Service in
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --font-headings: 'Cinzel', serif;
+      --font-body: 'Inter', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-headings);
+    }
+    body {
+      font-family: var(--font-body);
+    }
+  </style>
 </head>
 <body class="font-['Inter'] bg-white text-gray-900 antialiased">
   <slot />
