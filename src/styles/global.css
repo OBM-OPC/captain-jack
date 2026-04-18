@@ -1,1 +1,45 @@
 @import "tailwindcss";
+
+/* ===== Button System ===== */
+
+/* Primary Button — filled, accent color */
+.btn-primary {
+  @apply inline-flex items-center justify-center font-medium rounded-lg bg-[#00c2d1] text-white transition-all duration-200 hover:bg-[#00a8b5] hover:shadow-md active:scale-[0.97];
+}
+
+/* Primary sizes */
+.btn-primary-sm { @apply px-4 py-2 text-sm; }
+.btn-primary-md { @apply px-6 py-3 text-base; }
+.btn-primary-lg { @apply px-8 py-4 text-base; }
+
+/* Secondary Button — outline, accent color */
+.btn-secondary {
+  @apply inline-flex items-center justify-center font-medium rounded-lg border-2 border-[#00c2d1] text-[#00c2d1] bg-transparent transition-all duration-200 hover:bg-[#00c2d1] hover:text-white hover:shadow-md active:scale-[0.97];
+}
+
+/* Secondary sizes */
+.btn-secondary-sm { @apply px-4 py-2 text-sm; }
+.btn-secondary-md { @apply px-6 py-3 text-base; }
+.btn-secondary-lg { @apply px-8 py-4 text-base; }
+
+/* ===== Link System ===== */
+
+/* Never underline links — use color + weight */
+a {
+  text-decoration: none;
+}
+
+/* Text link — accent color, subtle hover */
+.link {
+  @apply font-medium text-[#00c2d1] transition-colors duration-150 hover:text-[#00a8b5];
+}
+
+/* Dark link — for light text on dark backgrounds */
+.link-dark {
+  @apply font-medium text-white/80 transition-colors duration-150 hover:text-white;
+}
+
+/* Muted link — for footer / secondary nav */
+.link-muted {
+  @apply font-medium text-gray-500 transition-colors duration-150 hover:text-gray-900;
+}

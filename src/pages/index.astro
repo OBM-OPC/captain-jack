@@ -20,11 +20,11 @@ import Layout from "../layouts/Layout.astro";
         </a>
 
         <!-- Phone number -->
-        <a href="tel:+302682012345" class="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-colors">
+        <a href="tel:+302682012345" class="link-muted flex items-center gap-2">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
           </svg>
-          <span class="font-medium">Gosia: +49 175 ... / +30 698 447 7868</span>
+          <span>Gosia: +49 175 ... / +30 698 447 7868</span>
         </a>
       </div>
     </div>
@@ -81,8 +81,8 @@ import Layout from "../layouts/Layout.astro";
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-3">Storage</h3>
           <p class="text-gray-600 mb-4">Sichere Trockenlagerung mit 24/7 Überwachung und klimatisierter Lagerhalle.</p>
-          <a href="#storage-section" class="text-[#00c2d1] font-medium flex items-center hover:text-[#00a8b5]">
-            Mehr erfahren →
+          <a href="#storage-section" class="link flex items-center">
+            Mehr erfahren <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
           </a>
         </div>
 
@@ -95,8 +95,8 @@ import Layout from "../layouts/Layout.astro";
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-3">Parking</h3>
           <p class="text-gray-600 mb-4">Überdachte Stellplätze für Boote und Camper mit direktem Hafenzugang.</p>
-          <a href="#parking-section" class="text-[#00c2d1] font-medium flex items-center hover:text-[#00a8b5]">
-            Mehr erfahren →
+          <a href="#parking-section" class="link flex items-center">
+            Mehr erfahren <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
           </a>
         </div>
 
@@ -109,8 +109,8 @@ import Layout from "../layouts/Layout.astro";
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-3">Service</h3>
           <p class="text-gray-600 mb-4">Professionelle Wartung, Reparaturen und saisonale Inspektionen vor Ort.</p>
-          <a href="#service-section" class="text-[#00c2d1] font-medium flex items-center hover:text-[#00a8b5]">
-            Mehr erfahren →
+          <a href="#service-section" class="link flex items-center">
+            Mehr erfahren <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
           </a>
         </div>
 
@@ -123,8 +123,8 @@ import Layout from "../layouts/Layout.astro";
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-3">Technologie</h3>
           <p class="text-gray-600 mb-4">Keelcrab® Unterwasserreinigung und Drohnen-Inspektion mit Live-Bericht.</p>
-          <a href="#keelcrab" class="text-[#00c2d1] font-medium flex items-center hover:text-[#00a8b5]">
-            Mehr erfahren →
+          <a href="#keelcrab" class="link flex items-center">
+            Mehr erfahren <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
           </a>
         </div>
       </div>
@@ -148,7 +148,7 @@ import Layout from "../layouts/Layout.astro";
           </div>
           <h3 class="text-xl font-bold text-white mb-3">Kein sicherer Stellplatz</h3>
           <p class="text-white/70 mb-6">Der Heimathafen ist überfüllt, Trockendocks kostspielig. Wo lässt sich mein Boot wirklich gut aufbewahren?</p>
-          <button class="solution-btn px-6 py-3 bg-red-500 text-white rounded-lg font-medium hover:bg-red-600 transition-colors" data-target="solution-1">
+          <button class="solution-btn inline-flex items-center justify-center px-6 py-3 bg-red-500 text-white rounded-lg font-medium transition-all duration-200 hover:bg-red-600 hover:shadow-md active:scale-[0.97]" data-target="solution-1">
             Lösung anzeigen
           </button>
           <div id="solution-1" class="hidden mt-6 p-4 bg-white/10 backdrop-blur-sm rounded-lg text-white/90 text-sm border border-white/10">
@@ -165,7 +165,7 @@ import Layout from "../layouts/Layout.astro";
           </div>
           <h3 class="text-xl font-bold text-white mb-3">Rumpf voller Bewuchs</h3>
           <p class="text-white/70 mb-6">Kran-Termine dauern Wochen. Der Rumpf verrottet im Hafen. Reinigen ist teuer und zeitaufwendig.</p>
-          <button class="solution-btn px-6 py-3 bg-red-500 text-white rounded-lg font-medium hover:bg-red-600 transition-colors" data-target="solution-2">
+          <button class="solution-btn inline-flex items-center justify-center px-6 py-3 bg-red-500 text-white rounded-lg font-medium transition-all duration-200 hover:bg-red-600 hover:shadow-md active:scale-[0.97]" data-target="solution-2">
             Lösung anzeigen
           </button>
           <div id="solution-2" class="hidden mt-6 p-4 bg-white/10 backdrop-blur-sm rounded-lg text-white/90 text-sm border border-white/10">
@@ -183,7 +183,7 @@ import Layout from "../layouts/Layout.astro";
           </div>
           <h3 class="text-xl font-bold text-white mb-3">Viele Anbieter, kein Überblick</h3>
           <p class="text-white/70 mb-6">Lager hier, Service dort, Dokumentation woanders. Fragmentierte Betreuung statt ganzheitlicher Lösung.</p>
-          <button class="solution-btn px-6 py-3 bg-red-500 text-white rounded-lg font-medium hover:bg-red-600 transition-colors" data-target="solution-3">
+          <button class="solution-btn inline-flex items-center justify-center px-6 py-3 bg-red-500 text-white rounded-lg font-medium transition-all duration-200 hover:bg-red-600 hover:shadow-md active:scale-[0.97]" data-target="solution-3">
             Lösung anzeigen
           </button>
           <div id="solution-3" class="hidden mt-6 p-4 bg-white/10 backdrop-blur-sm rounded-lg text-white/90 text-sm border border-white/10">
@@ -253,10 +253,10 @@ import Layout from "../layouts/Layout.astro";
 
           <!-- CTAs -->
           <div class="mt-8 flex flex-wrap gap-4">
-            <a href="/kontakt" class="inline-flex items-center px-6 py-3 bg-[#00c2d1] text-white font-medium rounded-lg hover:bg-[#00a8b5] transition-colors">
+            <a href="/kontakt" class="btn-primary btn-primary-md">
               Kontakt aufnehmen
             </a>
-            <a href="#video" class="inline-flex items-center px-6 py-3 border-2 border-gray-300 text-gray-700 font-medium rounded-lg hover:border-[#00c2d1] hover:text-[#00c2d1] transition-colors">
+            <a href="#video" class="btn-secondary btn-secondary-md">
               <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
               </svg>
@@ -575,7 +575,7 @@ import Layout from "../layouts/Layout.astro";
       <p class="text-xl text-slate-300 mb-8">Lassen Sie sich beraten. Wir finden die passende Lösung für Ihr Boot – ob Storage, Service oder beides.</p>
       
       <div class="flex flex-wrap justify-center gap-4">
-        <a href="tel:+306984477868" class="inline-flex items-center px-8 py-4 bg-white text-slate-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+        <a href="tel:+306984477868" class="btn-primary btn-primary-lg">
           <svg class="mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
             <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
           </svg>
@@ -600,9 +600,9 @@ import Layout from "../layouts/Layout.astro";
         </div>
         
         <div class="flex gap-6 text-sm">
-          <a href="#services" class="hover:text-white transition-colors">Leistungen</a>
-          <a href="#keelcrab" class="hover:text-white transition-colors">Keelcrab</a>
-          <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+          <a href="#services" class="link-dark">Leistungen</a>
+          <a href="#keelcrab" class="link-dark">Keelcrab</a>
+          <a href="#faq" class="link-dark">FAQ</a>
         </div>
         
         <p class="text-sm">© 2025 Captain Jack. Alle Rechte vorbehalten.</p>
