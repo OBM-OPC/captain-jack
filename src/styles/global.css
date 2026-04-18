@@ -24,12 +24,12 @@
 
 /* Alert Button — for problem/warning sections on dark bg (soft pill) */
 .btn-alert {
-  @apply inline-flex items-center justify-center font-medium rounded-full bg-red-500/15 text-red-400 border border-red-500/25 transition-all duration-200 hover:bg-red-500 hover:text-white hover:border-red-500 hover:shadow-md hover:shadow-red-500/25 active:scale-[0.97];
+  @apply inline-flex items-center justify-center font-medium rounded-full bg-red-500/15 text-red-400 border border-red-500/25 transition-all duration-200 hover:bg-emerald-500 hover:text-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/25 active:scale-[0.97];
 }
 
 /* Alert resolved state — green after clicking */
 .btn-alert-resolved {
-  @apply inline-flex items-center justify-center font-medium rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/25 transition-all duration-200 hover:bg-emerald-500 hover:text-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/25 active:scale-[0.97];
+  @apply inline-flex items-center justify-center font-medium rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/25 transition-all duration-200 hover:bg-red-500 hover:text-white hover:border-red-500 hover:shadow-md hover:shadow-red-500/25 active:scale-[0.97];
 }
 
 /* ===== Link System ===== */
