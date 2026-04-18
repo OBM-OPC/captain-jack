@@ -37,6 +37,21 @@
   to = "/kontakt/index.html"
   status = 200
 
+[[redirects]]
+  from = "/ueber-uns"
+  to = "/ueber-uns/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/leistungen"
+  to = "/leistungen/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/keelcrab"
+  to = "/keelcrab/index.html"
+  status = 200
+
 [[headers]]
   for = "/*"
   [headers.values]
