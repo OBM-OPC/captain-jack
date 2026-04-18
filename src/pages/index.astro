@@ -148,7 +148,7 @@ import Layout from "../layouts/Layout.astro";
           </div>
           <h3 class="text-xl font-bold text-white mb-3">Kein sicherer Stellplatz</h3>
           <p class="text-white/70 mb-6">Der Heimathafen ist überfüllt, Trockendocks kostspielig. Wo lässt sich mein Boot wirklich gut aufbewahren?</p>
-          <button class="solution-btn inline-flex items-center justify-center px-6 py-3 bg-red-500 text-white rounded-lg font-medium transition-all duration-200 hover:bg-red-600 hover:shadow-md active:scale-[0.97]" data-target="solution-1">
+          <button class="solution-btn btn-alert px-6 py-3" data-target="solution-1">
             Lösung anzeigen
           </button>
           <div id="solution-1" class="hidden mt-6 p-4 bg-white/10 backdrop-blur-sm rounded-lg text-white/90 text-sm border border-white/10">
@@ -165,7 +165,7 @@ import Layout from "../layouts/Layout.astro";
           </div>
           <h3 class="text-xl font-bold text-white mb-3">Rumpf voller Bewuchs</h3>
           <p class="text-white/70 mb-6">Kran-Termine dauern Wochen. Der Rumpf verrottet im Hafen. Reinigen ist teuer und zeitaufwendig.</p>
-          <button class="solution-btn inline-flex items-center justify-center px-6 py-3 bg-red-500 text-white rounded-lg font-medium transition-all duration-200 hover:bg-red-600 hover:shadow-md active:scale-[0.97]" data-target="solution-2">
+          <button class="solution-btn btn-alert px-6 py-3" data-target="solution-2">
             Lösung anzeigen
           </button>
           <div id="solution-2" class="hidden mt-6 p-4 bg-white/10 backdrop-blur-sm rounded-lg text-white/90 text-sm border border-white/10">
@@ -183,7 +183,7 @@ import Layout from "../layouts/Layout.astro";
           </div>
           <h3 class="text-xl font-bold text-white mb-3">Viele Anbieter, kein Überblick</h3>
           <p class="text-white/70 mb-6">Lager hier, Service dort, Dokumentation woanders. Fragmentierte Betreuung statt ganzheitlicher Lösung.</p>
-          <button class="solution-btn inline-flex items-center justify-center px-6 py-3 bg-red-500 text-white rounded-lg font-medium transition-all duration-200 hover:bg-red-600 hover:shadow-md active:scale-[0.97]" data-target="solution-3">
+          <button class="solution-btn btn-alert px-6 py-3" data-target="solution-3">
             Lösung anzeigen
           </button>
           <div id="solution-3" class="hidden mt-6 p-4 bg-white/10 backdrop-blur-sm rounded-lg text-white/90 text-sm border border-white/10">
@@ -624,14 +624,22 @@ import Layout from "../layouts/Layout.astro";
       });
     });
 
-    // Solution buttons
+    // Solution buttons — toggle between alert (red) and resolved (green)
     document.querySelectorAll('.solution-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const targetId = btn.getAttribute('data-target');
         const target = document.getElementById(targetId);
         if (target) {
           target.classList.toggle('hidden');
-          btn.textContent = target.classList.contains('hidden') ? 'Lösung anzeigen' : 'Lösung ausblenden';
+          const isHidden = target.classList.contains('hidden');
+          btn.textContent = isHidden ? 'Lösung anzeigen' : 'Lösung ausblenden';
+          if (isHidden) {
+            btn.classList.remove('btn-alert-resolved');
+            btn.classList.add('btn-alert');
+          } else {
+            btn.classList.remove('btn-alert');
+            btn.classList.add('btn-alert-resolved');
+          }
         }
       });
     });
