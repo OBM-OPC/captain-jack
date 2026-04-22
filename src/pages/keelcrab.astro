@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import keelcrabFront from "../assets/images/keelcrab_front.png";
 import keelcrabOnBoat from "../assets/images/keelcrab_on_boat.png";
+import keelcrabUnder from "../assets/images/keelcrab_under.png";
+import keelcrabFrontalSunshine from "../assets/images/keelcrab_frontal_sunshine.png";
 
 const benefits = [
   {
@@ -47,12 +49,12 @@ const technologyPoints = [
 
 const audiences = [
   {
-    title: "Segelboote & Motorboote",
-    text: "Bis ca. 25 Meter Länge",
+    title: "Privatbesitzer",
+    text: "Segelboote & Motorboote bis ca. 25 Meter Länge",
   },
   {
-    title: "Privatbesitzer & Marinas",
-    text: "Ideal für regelmäßige Wartung",
+    title: "Marinas und Charterer",
+    text: "Ideal für regelmäßige Wartung und Flottenpflege",
   },
 ];
 ---
@@ -61,52 +63,60 @@ const audiences = [
   title="Keelcrab Bootsrumpf-Reinigung"
   description="Bootsrumpf-Reinigung im Wasser mit Keelcrab: effizient, umweltfreundlich und ohne Kranen – direkt bei Captain Jack."
 >
-  <section class="relative overflow-hidden bg-gradient-to-br from-[#0A2540] via-[#12385a] to-[#0A2540] py-20 text-white lg:py-28">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(0,194,209,0.18),_transparent_35%)]"></div>
+  <!-- Hero -->
+  <section class="relative overflow-hidden min-h-[600px] py-20 text-white lg:py-28">
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+      <Image
+        src={keelcrabFront}
+        alt="Keelcrab Unterwasser-Drohne"
+        width={1920}
+        height={800}
+        class="h-full w-full object-cover"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-[#0A2540]/95 via-[#0A2540]/80 to-[#0A2540]/60"></div>
+    </div>
+    
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
-        <div>
-          <div class="mb-6 inline-flex items-center rounded-full border border-[#00c2d1]/40 bg-[#00c2d1]/10 px-4 py-2 text-sm font-medium text-[#00c2d1]">
-            Unterwasserreinigung ohne Auswasserung
-          </div>
-          <h1 class="mb-4 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
-            Bootsrumpf-Reinigung im Wasser mit Keelcrab
-          </h1>
-          <p class="mb-4 text-xl font-semibold text-[#00c2d1] md:text-2xl">
-            Effizient. Umweltfreundlich. Ohne Kranen.
-          </p>
-          <p class="max-w-2xl text-lg leading-relaxed text-slate-300">
-            Keelcrab ist ein innovatives Unterwasser-Drohnen-System zur Reinigung und Inspektion von
-            Bootsrümpfen – direkt im Wasser. Keine Auswasserung, keine Chemie, keine Ausfallzeiten.
-          </p>
-          <div class="mt-8 flex flex-wrap gap-4">
-            <a href="/kontakt" class="btn-primary">Termin anfragen</a>
-            <a href="/kontakt" class="btn-secondary">Kontakt aufnehmen</a>
-          </div>
+      <div class="max-w-3xl">
+        <div class="mb-6 inline-flex items-center rounded-full border border-[#00c2d1]/40 bg-[#00c2d1]/10 px-4 py-2 text-sm font-medium text-[#00c2d1]">
+          Unterwasserreinigung ohne Auswasserung
         </div>
-
-        <div class="relative">
-          <div class="absolute -inset-4 rounded-[2rem] bg-[#00c2d1]/15 blur-3xl"></div>
-          <div class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-4 shadow-2xl backdrop-blur-sm">
-            <Image
-              src={keelcrabFront}
-              alt="Keelcrab Unterwasser-Drohne zur Bootsrumpf-Reinigung"
-              width={900}
-              height={900}
-              class="h-full w-full rounded-[1.5rem] object-cover"
-              loading="eager"
-            />
-          </div>
+        <h1 class="mb-4 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
+          Bootsrumpf-Reinigung im Wasser mit Keelcrab
+        </h1>
+        <p class="mb-4 text-xl font-semibold text-[#00c2d1] md:text-2xl">
+          Effizient. Umweltfreundlich. Ohne Kranen.
+        </p>
+        <p class="max-w-2xl text-lg leading-relaxed text-slate-300">
+          Keelcrab ist ein innovatives Unterwasser-Drohnen-System zur Reinigung und Inspektion von
+          Bootsrümpfen – direkt im Wasser. Keine Auswasserung, keine Chemie, keine Ausfallzeiten.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="/kontakt" class="btn-primary btn-primary-lg">Termin anfragen</a>
+          <a href="/kontakt" class="btn-secondary btn-secondary-lg">Kontakt aufnehmen</a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Vorteile -->
   <section class="bg-white py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="mb-12 text-center">
         <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-[#00c2d1]">Vorteile</p>
         <h2 class="text-3xl font-bold text-gray-900 md:text-4xl">Warum Keelcrab?</h2>
+      </div>
+
+      <div class="mb-12 overflow-hidden rounded-3xl shadow-lg">
+        <Image
+          src={keelcrabFrontalSunshine}
+          alt="Keelcrab in der Sonne"
+          width={1200}
+          height={500}
+          class="h-auto w-full object-cover"
+        />
       </div>
 
       <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -133,20 +143,50 @@ const audiences = [
       </div>
 
       <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-        {steps.map((step, index) => (
-          <div class="relative overflow-hidden rounded-3xl bg-white p-8 shadow-sm border border-slate-200">
-            <div class="absolute right-6 top-5 text-6xl font-bold leading-none text-slate-100">
-              {String(index + 1).padStart(2, "0")}
-            </div>
-            <div class="relative">
-              <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0A2540] text-white">
-                <span class="text-lg font-bold">{index + 1}</span>
-              </div>
-              <h3 class="mb-3 text-2xl font-bold text-[#0A2540]">{step.title}</h3>
-              <p class="text-gray-600">{step.text}</p>
-            </div>
+        <div class="relative overflow-hidden rounded-3xl bg-white p-8 shadow-sm border border-slate-200">
+          <div class="absolute right-6 top-5 text-6xl font-bold leading-none text-slate-100">
+            01
           </div>
-        ))}
+          <div class="relative">
+            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0A2540] text-white">
+              <span class="text-lg font-bold">1</span>
+            </div>
+            <h3 class="mb-3 text-2xl font-bold text-[#0A2540]">Einsatz vor Ort</h3>
+            <p class="text-gray-600">Der Roboter wird direkt am Boot ins Wasser gesetzt</p>
+          </div>
+        </div>
+
+        <div class="relative overflow-hidden rounded-3xl bg-white shadow-sm border border-slate-200">
+          <div class="aspect-[4/3] overflow-hidden">
+            <Image
+              src={keelcrabUnder}
+              alt="Keelcrab unter Wasser im Einsatz"
+              width={600}
+              height={450}
+              class="h-full w-full object-cover"
+            />
+          </div>
+          <div class="p-8">
+            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0A2540] text-white">
+              <span class="text-lg font-bold">2</span>
+            </div>
+            <h3 class="mb-3 text-2xl font-bold text-[#0A2540]">Reinigung & Inspektion</h3>
+            <p class="text-gray-600">Bürsten entfernen Bewuchs, Kamera überprüft den Zustand</p>
+          </div>
+        </div>
+
+        <div class="relative overflow-hidden rounded-3xl bg-white p-8 shadow-sm border border-slate-200">
+          <div class="absolute right-6 top-5 text-6xl font-bold leading-none text-slate-100">
+            03
+          </div>
+          <div class="relative">
+            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0A2540] text-white">
+              <span class="text-lg font-bold">3</span>
+            </div>
+            <h3 class="mb-3 text-2xl font-bold text-[#0A2540]">Auswertung</h3>
+            <p class="text-gray-600">Du erhältst Bilder und Einblicke zum Rumpfzustand</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -246,17 +286,18 @@ const audiences = [
     </div>
   </section>
 
+  <!-- CTA -->
   <section class="bg-gradient-to-br from-[#0A2540] via-[#12385a] to-[#0A2540] py-20 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-4xl rounded-[2rem] border border-white/10 bg-white/5 px-8 py-12 text-center shadow-xl backdrop-blur-sm md:px-12">
+      <div class="mx-auto max-w-4xl text-center">
         <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-[#00c2d1]">Jetzt anfragen</p>
         <h2 class="mb-4 text-3xl font-bold md:text-5xl">Halte deinen Bootsrumpf dauerhaft sauber</h2>
         <p class="mx-auto mb-8 max-w-2xl text-lg text-slate-300">
           Buche jetzt deine Reinigung und Inspektion.
         </p>
         <div class="flex flex-wrap justify-center gap-4">
-          <a href="/kontakt" class="btn-primary">Termin anfragen</a>
-          <a href="/kontakt" class="btn-secondary">Kontakt aufnehmen</a>
+          <a href="/kontakt" class="btn-primary btn-primary-lg">Termin anfragen</a>
+          <a href="/kontakt" class="btn-secondary btn-secondary-lg">Kontakt aufnehmen</a>
         </div>
       </div>
     </div>
