@@ -1,13 +1,36 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from 'astro:assets';
+import captain from '../assets/images/captain.jpg';
+import ourStore from '../assets/images/our_store.jpg';
+import ourStore2 from '../assets/images/our_store_2.jpg';
+import cars from '../assets/images/cars.jpg';
+import ourLounge from '../assets/images/our_lounge.jpg';
+import ourHome from '../assets/images/our_home.jpg';
+import saschaAndGoshia from '../assets/images/sascha_and_goshia.jpg';
+import saschaWithCaptain from '../assets/images/sascha_with_captain.jpg';
+import prevezaPromenade from '../assets/images/preveza_promenade.png';
+import ourStoreAtNight from '../assets/images/our_store_at_night.jpg';
+import ourStoreVertikal from '../assets/images/our_store_vertikal.jpg';
+import captainJackStorageCar from '../assets/images/captain-jack_storage_car.JPG';
 ---
 
 <Layout title="Bootslagerung & Keelcrab Service Preveza" description="Captain Jack - Moderne Bootslagerung und smarter Bootsservice in Preveza. Exklusive Keelcrab®-Technologie in Griechenland.">
 
   <!-- Hero Section -->
-  <section class="relative bg-gradient-to-br from-[#0A2540] via-[#1a3a5c] to-[#0d2b3a] text-white overflow-hidden">
-    <!-- Subtle pattern overlay -->
-    <div class="absolute inset-0 opacity-5" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+  <section class="relative text-white overflow-hidden min-h-[600px] flex items-center">
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+      <Image 
+        src={captain} 
+        alt="Captain Jack - Ihr Partner für Bootslagerung in Preveza" 
+        class="w-full h-full object-cover"
+        width={1920}
+        height={800}
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-[#0A2540]/90 via-[#0A2540]/70 to-transparent"></div>
+    </div>
     
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
       <div class="max-w-3xl text-left">
@@ -241,15 +264,14 @@ import Layout from "../layouts/Layout.astro";
         </div>
 
         <div class="relative">
-          <div class="aspect-square rounded-2xl bg-gradient-to-br from-[#00c2d1]/20 to-[#00c2d1]/10 backdrop-blur-sm flex items-center justify-center border border-[#00c2d1]/20">
-            <div class="text-center p-8">
-              <div class="w-48 h-48 mx-auto bg-[#00c2d1]/30 rounded-2xl flex items-center justify-center border-2 border-[#00c2d1]/40">
-                <svg class="w-24 h-24 text-[#00c2d1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                </svg>
-              </div>
-              <p class="mt-4 text-gray-500 text-sm">Keelcrab® Technologie</p>
-            </div>
+          <div class="rounded-2xl overflow-hidden shadow-lg">
+            <Image 
+              src={ourStoreVertikal} 
+              alt="Captain Jack Anlage in Preveza" 
+              class="w-full h-auto object-cover"
+              width={600}
+              height={800}
+            />
           </div>
         </div>
       </div>
@@ -374,14 +396,14 @@ import Layout from "../layouts/Layout.astro";
 
         <!-- Right: Image + Location -->
         <div>
-          <div class="rounded-2xl overflow-hidden bg-gradient-to-br from-blue-400/20 to-cyan-400/20 aspect-[4/3] flex items-center justify-center border border-gray-200">
-            <div class="text-center p-8">
-              <svg class="w-20 h-20 text-blue-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-              </svg>
-              <p class="text-gray-500 text-sm">Hafenbild (folgt)</p>
-            </div>
+          <div class="rounded-2xl overflow-hidden shadow-lg">
+            <Image 
+              src={prevezaPromenade} 
+              alt="Preveza Promenade und Stadthafen" 
+              class="w-full h-auto object-cover"
+              width={800}
+              height={600}
+            />
           </div>
           <div class="mt-4 bg-white rounded-xl p-4 shadow-sm">
             <div class="flex items-start gap-3">
@@ -466,6 +488,101 @@ import Layout from "../layouts/Layout.astro";
             <h3 class="text-xl font-bold text-gray-900 mb-3">Abholen & Lossegeln</h3>
             <p class="text-gray-600">Ihr Boot glänzt wie neu – mit detaillierter Dokumentation. Keine Trockenzeit, keine Wartezeit. Sofort segelfertig!</p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery / Impressionen -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <p class="text-[#00c2d1] text-sm font-medium tracking-wider uppercase mb-3">Impressionen</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Ihr Boot bei uns in guten Händen</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Moderne Anlage, persönlicher Service, perfekte Lage — das ist Captain Jack.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-md">
+          <Image 
+            src={ourStore} 
+            alt="Captain Jack Lagerhalle" 
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            width={800}
+            height={800}
+          />
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-md">
+          <Image 
+            src={ourStore2} 
+            alt="Captain Jack Anlage" 
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            width={400}
+            height={400}
+          />
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-md">
+          <Image 
+            src={ourLounge} 
+            alt="Lounge Bereich" 
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            width={400}
+            height={400}
+          />
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-md">
+          <Image 
+            src={cars} 
+            alt="Stellplätze für Camper und Autos" 
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            width={400}
+            height={400}
+          />
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-md">
+          <Image 
+            src={captainJackStorageCar} 
+            alt="Bootslagerung und Car Storage" 
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            width={400}
+            height={400}
+          />
+        </div>
+        <div class="col-span-2 rounded-2xl overflow-hidden shadow-md">
+          <Image 
+            src={ourStoreAtNight} 
+            alt="Captain Jack bei Nacht" 
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            width={800}
+            height={400}
+          />
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-md">
+          <Image 
+            src={ourHome} 
+            alt="Unser Zuhause in Preveza" 
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            width={400}
+            height={400}
+          />
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-md">
+          <Image 
+            src={saschaAndGoshia} 
+            alt="Sascha und Goshia - Ihr Captain Jack Team" 
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            width={400}
+            height={400}
+          />
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-md">
+          <Image 
+            src={saschaWithCaptain} 
+            alt="Sascha mit Captain" 
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            width={400}
+            height={400}
+          />
         </div>
       </div>
     </div>
