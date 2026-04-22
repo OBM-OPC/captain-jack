@@ -1,45 +1,96 @@
 ---
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/ueber-uns", label: "Über uns" },
+  { href: "/leistungen", label: "Leistungen" },
+  { href: "/keelcrab", label: "Keelcrab®" },
+  { href: "/kontakt", label: "Kontakt" },
+];
+
+const currentPath = Astro.url.pathname;
 ---
 
 <nav id="main-nav" class="bg-white border-b border-gray-100 sticky top-0 z-40">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-20">
-      <a href="/" class="flex items-center">
-        <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center shadow-lg">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      
+      <!-- Logo: Captain Jack in Cinzel -->
+      <a href="/" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 bg-gradient-to-br from-[#0A2540] to-[#3FA7D6] rounded-full flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M2.5 8.5l2.5 3.5L9 9l4 6 3.5-2.5L22 19"></path>
             <path d="M22 13a9 9 0 1 1-9-9 9 9 0 0 1 9 9Z"></path>
             <path d="M7 4h10v3H7z"></path>
           </svg>
         </div>
-        <span class="ml-3 text-xl font-bold text-gray-900">Captain Jack</span>
+        <span class="text-2xl font-bold text-[#0A2540] tracking-wide" style="font-family: 'Cinzel', serif;">Captain Jack</span>
       </a>
-      <div class="hidden md:flex items-center space-x-8">
-        <a href="/ueber-uns" class="link-muted">Über uns</a>
-        <a href="/leistungen" class="link-muted">Leistungen</a>
-        <a href="/keelcrab" class="link-muted">Keelcrab®</a>
-        <a href="/kontakt" class="link-muted">Kontakt</a>
-        <a href="tel:+491754271476" class="btn-primary btn-primary-sm">
-          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center gap-8">
+        {navLinks.map((link) => (
+          <a 
+            href={link.href} 
+            class={`text-sm font-medium transition-colors duration-150 ${
+              currentPath === link.href 
+                ? "text-[#00c2d1]" 
+                : "text-gray-600 hover:text-gray-900"
+            }`}
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
+
+      <!-- CTA Button (Desktop) -->
+      <div class="hidden md:block">
+        <a 
+          href="tel:+306984447868" 
+          class="inline-flex items-center gap-2 px-5 py-2.5 bg-[#00c2d1] text-white text-sm font-medium rounded-lg hover:bg-[#00a8b5] transition-all duration-200 hover:shadow-md active:scale-[0.97]"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
           </svg>
           Anrufen
         </a>
       </div>
 
-      <!-- Mobile menu button -->
-      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Menü öffnen">
-        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <!-- Mobile Menu Button -->
+      <button 
+        id="mobile-menu-btn" 
+        class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors" 
+        aria-label="Menü öffnen"
+        aria-expanded="false"
+      >
+        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
       </button>
     </div>
 
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
-      <a href="/ueber-uns" class="block px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors">Über uns</a>
-      <a href="/leistungen" class="block px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors">Leistungen</a>
-      <a href="/keelcrab" class="block px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors">Keelcrab®</a>
-      <a href="/kontakt" class="block px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors">Kontakt</a>
-      <a href="tel:+491754271476" class="block px-4 py-2 rounded-lg text-[#00c2d1] font-medium">+49 175 4271476</a>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-1">
+      {navLinks.map((link) => (
+        <a 
+          href={link.href} 
+          class={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+            currentPath === link.href
+              ? "bg-[#00c2d1]/10 text-[#00c2d1]"
+              : "text-gray-700 hover:bg-gray-50"
+          }`}
+        >
+          {link.label}
+        </a>
+      ))}
+      <a 
+        href="tel:+306984447868" 
+        class="flex items-center gap-2 px-4 py-3 text-sm font-medium text-[#00c2d1]"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+        </svg>
+        +30 698 447 7868
+      </a>
     </div>
   </div>
 </nav>
@@ -47,7 +98,10 @@
 <script>
   const btn = document.getElementById('mobile-menu-btn');
   const menu = document.getElementById('mobile-menu');
+  
   btn?.addEventListener('click', () => {
+    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!isExpanded));
     menu?.classList.toggle('hidden');
   });
 </script>
