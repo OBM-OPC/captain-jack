@@ -1,212 +1,264 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import keelcrabFront from "../assets/images/keelcrab_front.png";
+import keelcrabOnBoat from "../assets/images/keelcrab_on_boat.png";
+
+const benefits = [
+  {
+    title: "Weniger Kraftstoffverbrauch",
+    text: "Bis zu 20% Einsparung durch sauberen Rumpf",
+  },
+  {
+    title: "Kein Kranen notwendig",
+    text: "Reinigung erfolgt direkt im Wasser",
+  },
+  {
+    title: "Mehr Leistung & Effizienz",
+    text: "Sauberer Rumpf = bessere Geschwindigkeit",
+  },
+  {
+    title: "Live-Inspektion",
+    text: "Fotos & Videos direkt auf dein Gerät",
+  },
+];
+
+const steps = [
+  {
+    title: "Einsatz vor Ort",
+    text: "Der Roboter wird direkt am Boot ins Wasser gesetzt",
+  },
+  {
+    title: "Reinigung & Inspektion",
+    text: "Bürsten entfernen Bewuchs, Kamera überprüft den Zustand",
+  },
+  {
+    title: "Auswertung",
+    text: "Du erhältst Bilder und Einblicke zum Rumpfzustand",
+  },
+];
+
+const technologyPoints = [
+  "Ferngesteuerte Unterwasser-Drohne",
+  "Für Salz- und Süßwasser geeignet",
+  "Zertifizierte Nylon- und Edelstahlbürsten",
+  "Schonend für Antifouling-Beschichtung",
+];
+
+const audiences = [
+  {
+    title: "Segelboote & Motorboote",
+    text: "Bis ca. 25 Meter Länge",
+  },
+  {
+    title: "Privatbesitzer & Marinas",
+    text: "Ideal für regelmäßige Wartung",
+  },
+];
 ---
 
-<Layout title="Keelcrab" description="Keelcrab® Unterwasserreinigung — exklusiv in Preveza. Ohne Kran, ohne Trockendock, direkt im Wasser.">
-
-  <!-- Hero -->
-  <section class="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-2xl">
-        <div class="inline-flex items-center px-3 py-1.5 bg-[#00c2d1]/15 border border-[#00c2d1]/40 rounded-full text-sm font-medium text-[#00c2d1] mb-6">
-          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-          Exklusiv in Griechenland
-        </div>
-        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Keelcrab® — Revolutionäre Unterwasserreinigung</h1>
-        <p class="text-lg text-slate-300 mb-8">Die weltweit erste automatische Unterwasserreinigung für Yachten. Direkt am Liegeplatz — ohne Kran, ohne Trockendock, ohne Wartezeit.</p>
-        <div class="flex flex-wrap gap-4">
-          <a href="/kontakt" class="btn-primary btn-primary-lg">Termin buchen</a>
-          <a href="#video" class="btn-secondary btn-secondary-lg">
-            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg>
-            Video ansehen
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- How it Works -->
-  <section class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <p class="text-[#00c2d1] text-sm font-medium tracking-wider uppercase mb-3">Wie funktioniert Keelcrab?</p>
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Intelligente Technologie, einfaches Prinzip</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">Der Keelcrab ist ein automatisches Reinigungsgerät, das per Fernbedienung entlang des Rumpfes navigiert — während Ihr Boot im Wasser bleibt.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="relative">
-          <div class="text-8xl font-bold text-gray-100 absolute -top-6 left-0">01</div>
-          <div class="relative pt-8">
-            <div class="w-14 h-14 bg-[#00c2d1] rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">Termin vereinbaren</h3>
-            <p class="text-gray-600">Kontaktieren Sie uns — wir kommen zu Ihnen. Auch an Ihrem Liegeplatz oder auf Anker.</p>
+<Layout
+  title="Keelcrab Bootsrumpf-Reinigung"
+  description="Bootsrumpf-Reinigung im Wasser mit Keelcrab: effizient, umweltfreundlich und ohne Kranen – direkt bei Captain Jack."
+>
+  <section class="relative overflow-hidden bg-gradient-to-br from-[#0A2540] via-[#12385a] to-[#0A2540] py-20 text-white lg:py-28">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(0,194,209,0.18),_transparent_35%)]"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div>
+          <div class="mb-6 inline-flex items-center rounded-full border border-[#00c2d1]/40 bg-[#00c2d1]/10 px-4 py-2 text-sm font-medium text-[#00c2d1]">
+            Unterwasserreinigung ohne Auswasserung
+          </div>
+          <h1 class="mb-4 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
+            Bootsrumpf-Reinigung im Wasser mit Keelcrab
+          </h1>
+          <p class="mb-4 text-xl font-semibold text-[#00c2d1] md:text-2xl">
+            Effizient. Umweltfreundlich. Ohne Kranen.
+          </p>
+          <p class="max-w-2xl text-lg leading-relaxed text-slate-300">
+            Keelcrab ist ein innovatives Unterwasser-Drohnen-System zur Reinigung und Inspektion von
+            Bootsrümpfen – direkt im Wasser. Keine Auswasserung, keine Chemie, keine Ausfallzeiten.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="/kontakt" class="btn-primary">Termin anfragen</a>
+            <a href="/kontakt" class="btn-secondary">Kontakt aufnehmen</a>
           </div>
         </div>
+
         <div class="relative">
-          <div class="text-8xl font-bold text-gray-100 absolute -top-6 left-0">02</div>
-          <div class="relative pt-8">
-            <div class="w-14 h-14 bg-[#00c2d1] rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">Keelcrab im Einsatz</h3>
-            <p class="text-gray-600">Das Gerät wird ins Wasser gelassen und reinigt den Rumpf per Fernbedienung. 1–3 Stunden je nach Bootgröße.</p>
-          </div>
-        </div>
-        <div class="relative">
-          <div class="text-8xl font-bold text-gray-100 absolute -top-6 left-0">03</div>
-          <div class="relative pt-8">
-            <div class="w-14 h-14 bg-[#00c2d1] rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">Fertig — segelfertig!</h3>
-            <p class="text-gray-600">Keine Trockenzeit, keine Wartezeit. Ihr Boot ist sofort wieder einsatzbereit — sauber und dokumentiert.</p>
+          <div class="absolute -inset-4 rounded-[2rem] bg-[#00c2d1]/15 blur-3xl"></div>
+          <div class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-4 shadow-2xl backdrop-blur-sm">
+            <Image
+              src={keelcrabFront}
+              alt="Keelcrab Unterwasser-Drohne zur Bootsrumpf-Reinigung"
+              width={900}
+              height={900}
+              class="h-full w-full rounded-[1.5rem] object-cover"
+              loading="eager"
+            />
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Benefits -->
-  <section class="py-20 bg-gray-50">
+  <section class="bg-white py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <p class="text-[#00c2d1] text-sm font-medium tracking-wider uppercase mb-3">Ihre Vorteile</p>
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Warum Keelcrab®?</h2>
+      <div class="mb-12 text-center">
+        <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-[#00c2d1]">Vorteile</p>
+        <h2 class="text-3xl font-bold text-gray-900 md:text-4xl">Warum Keelcrab?</h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-white rounded-2xl p-8 shadow-sm">
-          <div class="w-12 h-12 bg-[#00c2d1]/10 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-[#00c2d1]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+        {benefits.map((benefit) => (
+          <div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-600">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h3 class="mb-3 text-xl font-bold text-[#0A2540]">{benefit.title}</h3>
+            <p class="text-gray-600">{benefit.text}</p>
           </div>
-          <h3 class="text-lg font-bold text-gray-900 !font-sans mb-2">Schonend fürs Gelcoat</h3>
-          <p class="text-gray-600">Keine Bürsten oder Schaber — sanfte Reinigung durch Vakuumtechnologie. Ihr Rumpf wird nicht beschädigt.</p>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-slate-50 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-12 text-center">
+        <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-[#00c2d1]">Ablauf</p>
+        <h2 class="text-3xl font-bold text-gray-900 md:text-4xl">So läuft die Reinigung ab</h2>
+      </div>
+
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+        {steps.map((step, index) => (
+          <div class="relative overflow-hidden rounded-3xl bg-white p-8 shadow-sm border border-slate-200">
+            <div class="absolute right-6 top-5 text-6xl font-bold leading-none text-slate-100">
+              {String(index + 1).padStart(2, "0")}
+            </div>
+            <div class="relative">
+              <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0A2540] text-white">
+                <span class="text-lg font-bold">{index + 1}</span>
+              </div>
+              <h3 class="mb-3 text-2xl font-bold text-[#0A2540]">{step.title}</h3>
+              <p class="text-gray-600">{step.text}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div class="order-2 lg:order-1">
+          <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-[#00c2d1]">Technologie</p>
+          <h2 class="mb-6 text-3xl font-bold text-gray-900 md:text-4xl">Moderne Unterwasser-Technologie</h2>
+          <div class="space-y-4">
+            {technologyPoints.map((point) => (
+              <div class="flex items-start gap-3">
+                <div class="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-600">
+                  <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <p class="text-lg text-gray-700">{point}</p>
+              </div>
+            ))}
+          </div>
+
+          <div class="mt-8 rounded-2xl border border-[#00c2d1]/20 bg-gradient-to-r from-[#00c2d1]/10 to-[#00c2d1]/5 p-6">
+            <p class="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-[#00c2d1]">Highlight</p>
+            <p class="text-xl font-bold text-[#0A2540]">Abdeckung bis zu 20 m (mit Ultraschall-System)</p>
+          </div>
         </div>
 
-        <div class="bg-white rounded-2xl p-8 shadow-sm">
-          <div class="w-12 h-12 bg-[#00c2d1]/10 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-[#00c2d1]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <div class="order-1 lg:order-2">
+          <div class="overflow-hidden rounded-[2rem] shadow-xl ring-1 ring-slate-200">
+            <Image
+              src={keelcrabOnBoat}
+              alt="Keelcrab am Boot im Einsatz"
+              width={1200}
+              height={900}
+              class="h-full w-full object-cover"
+            />
           </div>
-          <h3 class="text-lg font-bold text-gray-900 !font-sans mb-2">Bis zu 75% günstiger</h3>
-          <p class="text-gray-600">Im Vergleich zum Herauskranen und traditioneller Reinigung. Kein Kran, kein Trockendock — weniger Kosten.</p>
-        </div>
-
-        <div class="bg-white rounded-2xl p-8 shadow-sm">
-          <div class="w-12 h-12 bg-[#00c2d1]/10 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-[#00c2d1]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-          </div>
-          <h3 class="text-lg font-bold text-gray-900 !font-sans mb-2">Volle Sichtbarkeit</h3>
-          <p class="text-gray-600">Detaillierte Dokumentation des gesamten Reinigungsprozesses — für volle Transparenz und Ihre Aufzeichnungen.</p>
-        </div>
-
-        <div class="bg-white rounded-2xl p-8 shadow-sm">
-          <div class="w-12 h-12 bg-[#00c2d1]/10 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-[#00c2d1]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-          </div>
-          <h3 class="text-lg font-bold text-gray-900 !font-sans mb-2">Sofort einsatzbereit</h3>
-          <p class="text-gray-600">Kein Trocknen nötig — direkt nach der Reinigung ist Ihr Boot wieder segelfertig.</p>
-        </div>
-
-        <div class="bg-white rounded-2xl p-8 shadow-sm">
-          <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          </div>
-          <h3 class="text-lg font-bold text-gray-900 !font-sans mb-2">Umweltfreundlich</h3>
-          <p class="text-gray-600">Filter im Keelcrab fängt alle Partikel auf — kein Microplastik ins Wasser. Keine Chemikalien notwendig.</p>
-        </div>
-
-        <div class="bg-white rounded-2xl p-8 shadow-sm">
-          <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-          </div>
-          <h3 class="text-lg font-bold text-gray-900 !font-sans mb-2">Mobiler Service</h3>
-          <p class="text-gray-600">Wir kommen zu Ihnen — ob am Liegeplatz, auf Anker oder im Hafen. Unser Keelcrab ist überall einsetzbar.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Charter Focus -->
-  <section class="py-20 bg-white">
+  <section class="bg-[#0A2540] py-20 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-gradient-to-br from-[#00c2d1]/5 to-[#00c2d1]/10 rounded-2xl p-12 border border-[#00c2d1]/20">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <p class="text-[#00c2d1] text-sm font-medium tracking-wider uppercase mb-3">Für Charterunternehmen</p>
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Schnelle Reinigung = Boote schneller wieder im Einsatz</h2>
-            <p class="text-gray-600 text-lg mb-6">Als Charterunternehmen können Sie sich keine wochenlangen Kran-Termine leisten. Keelcrab reinigt direkt im Wasser — Ihre Flotte ist schneller wieder verfügbar.</p>
-            <ul class="space-y-3">
-              <li class="flex items-start gap-3">
-                <div class="w-5 h-5 bg-[#00c2d1] rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
-                  <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
-                </div>
-                <span class="text-gray-700">Minimale Ausfallzeit — Reinigung in 1–3 Stunden</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <div class="w-5 h-5 bg-[#00c2d1] rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
-                  <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
-                </div>
-                <span class="text-gray-700">Pricing nach Bootslänge, nicht nach Stunde</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <div class="w-5 h-5 bg-[#00c2d1] rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
-                  <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
-                </div>
-                <span class="text-gray-700">Nur 800W Stromverbrauch — sehr effizient</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <div class="w-5 h-5 bg-[#00c2d1] rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
-                  <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
-                </div>
-                <span class="text-gray-700">Neueste Keelcrab-Generation mit Branding sichtbar</span>
-              </li>
+      <div class="mb-12 text-center">
+        <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-[#00c2d1]">Vergleich</p>
+        <h2 class="text-3xl font-bold md:text-4xl">Traditionelle Reinigung vs. Keelcrab</h2>
+      </div>
+
+      <div class="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm">
+        <div class="grid grid-cols-1 md:grid-cols-2">
+          <div class="border-b border-white/10 p-8 md:border-b-0 md:border-r">
+            <h3 class="mb-6 text-2xl font-bold text-white">Klassisch</h3>
+            <ul class="space-y-4 text-slate-300">
+              <li>Boot muss aus dem Wasser</li>
+              <li>Hohe Kosten</li>
+              <li>Zeitaufwendig</li>
+              <li>Chemische Mittel</li>
             </ul>
           </div>
-          <div class="aspect-square rounded-2xl bg-gradient-to-br from-[#00c2d1]/20 to-[#00c2d1]/10 flex items-center justify-center border border-[#00c2d1]/20">
-            <div class="text-center p-8">
-              <div class="w-32 h-32 mx-auto bg-[#00c2d1]/30 rounded-2xl flex items-center justify-center border-2 border-[#00c2d1]/40">
-                <svg class="w-16 h-16 text-[#00c2d1]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-              </div>
-              <p class="mt-4 text-gray-500 text-sm">Keelcrab® Gerät (Foto folgt)</p>
-            </div>
+          <div class="p-8">
+            <h3 class="mb-6 text-2xl font-bold text-[#00c2d1]">Keelcrab</h3>
+            <ul class="space-y-4 text-white">
+              <li class="flex items-center gap-3"><span class="text-emerald-400">✓</span>Reinigung im Wasser</li>
+              <li class="flex items-center gap-3"><span class="text-emerald-400">✓</span>Kosteneffizient</li>
+              <li class="flex items-center gap-3"><span class="text-emerald-400">✓</span>Schnell</li>
+              <li class="flex items-center gap-3"><span class="text-emerald-400">✓</span>Umweltfreundlich</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Video -->
-  <section id="video" class="py-20 bg-gray-50">
+  <section class="bg-white py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-10">
-        <p class="text-[#00c2d1] text-sm font-medium tracking-wider uppercase mb-3">Live erleben</p>
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Keelcrab in Action</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">Sehen Sie selbst, wie die revolutionäre Technologie funktioniert — direkt im Wasser, ohne Austrocknen.</p>
+      <div class="mx-auto max-w-4xl text-center">
+        <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-[#00c2d1]">Zielgruppe</p>
+        <h2 class="mb-12 text-3xl font-bold text-gray-900 md:text-4xl">Für wen ist Keelcrab geeignet?</h2>
       </div>
-      <div class="max-w-4xl mx-auto">
-        <div class="aspect-video rounded-2xl overflow-hidden shadow-lg">
-          <iframe src="https://www.youtube.com/embed/4DRgeDxJmjI" title="Keelcrab in Action" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full"></iframe>
+
+      <div class="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2">
+        {audiences.map((audience) => (
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-8 text-left shadow-sm">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-600">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h3 class="mb-2 text-xl font-bold text-[#0A2540]">{audience.title}</h3>
+            <p class="text-gray-600">{audience.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-br from-[#0A2540] via-[#12385a] to-[#0A2540] py-20 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-4xl rounded-[2rem] border border-white/10 bg-white/5 px-8 py-12 text-center shadow-xl backdrop-blur-sm md:px-12">
+        <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-[#00c2d1]">Jetzt anfragen</p>
+        <h2 class="mb-4 text-3xl font-bold md:text-5xl">Halte deinen Bootsrumpf dauerhaft sauber</h2>
+        <p class="mx-auto mb-8 max-w-2xl text-lg text-slate-300">
+          Buche jetzt deine Reinigung und Inspektion.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/kontakt" class="btn-primary">Termin anfragen</a>
+          <a href="/kontakt" class="btn-secondary">Kontakt aufnehmen</a>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- CTA -->
-  <section class="py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">Bereit für einen sauberen Rumpf?</h2>
-      <p class="text-xl text-slate-300 mb-8">Buchen Sie Ihren Keelcrab-Termin — schnell, unkompliziert, direkt vor Ort.</p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="/kontakt" class="btn-primary btn-primary-lg">Termin buchen</a>
-        <a href="https://wa.me/306984477868" target="_blank" rel="noopener" class="btn-secondary btn-secondary-lg">
-          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
-          WhatsApp
-        </a>
-      </div>
-    </div>
-  </section>
-
 </Layout>
