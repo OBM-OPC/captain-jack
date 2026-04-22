@@ -31,18 +31,8 @@ import keelcrabOnBoat from '../assets/images/keelcrab_on_boat.png';
   </section>
 
   <!-- Keelcrab Highlight -->
-  <section class="relative overflow-hidden min-h-[500px] flex items-center">
-    <!-- Background Image -->
-    <div class="absolute inset-0">
-      <Image
-        src={keelcrabOnBoat}
-        alt="Keelcrab Reinigung im Wasser"
-        width={1920}
-        height={800}
-        class="h-full w-full object-cover"
-      />
-      <div class="absolute inset-0 bg-gradient-to-r from-[#0A2540]/95 via-[#0A2540]/85 to-[#0A2540]/60"></div>
-    </div>
+  <section class="relative overflow-hidden bg-gradient-to-br from-[#0A2540] via-[#12385a] to-[#0A2540] py-20">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(0,194,209,0.15),_transparent_40%)]"></div>
     
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -109,19 +99,16 @@ import keelcrabOnBoat from '../assets/images/keelcrab_on_boat.png';
           </div>
         </div>
         
-        <!-- Right: Stats or extra info -->
+        <!-- Right: Image -->
         <div class="hidden lg:block">
-          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-            <div class="text-center mb-6">
-              <p class="text-5xl font-bold text-[#00c2d1] mb-2">20%</p>
-              <p class="text-white font-medium">Weniger Kraftstoff</p>
-              <p class="text-slate-400 text-sm">durch sauberen Rumpf</p>
-            </div>
-            <div class="border-t border-white/10 pt-6 text-center">
-              <p class="text-5xl font-bold text-[#00c2d1] mb-2">25m</p>
-              <p class="text-white font-medium">Bootslänge</p>
-              <p class="text-slate-400 text-sm">max. für Keelcrab</p>
-            </div>
+          <div class="rounded-2xl overflow-hidden shadow-2xl">
+            <Image
+              src={keelcrabOnBoat}
+              alt="Keelcrab am Boot im Einsatz"
+              width={800}
+              height={600}
+              class="w-full h-auto object-cover"
+            />
           </div>
         </div>
       </div>
