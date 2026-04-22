@@ -7,6 +7,8 @@ import keelcrabUnder from "../assets/images/keelcrab_under.png";
 import keelcrabFrontal from "../assets/images/keelcrab_frontal.png";
 import keelcrabFrontalSunshine from "../assets/images/keelcrab_frontal_sunshine.png";
 import keelcrabBottom from "../assets/images/keelcrab_bottom.webp";
+import keelcrabDirty from "../assets/images/keelcrab_dirty.png";
+import keelcrabFrontalFast from "../assets/images/keelcrab_frontal_fast.png";
 
 const benefits = [
   {
@@ -204,19 +206,30 @@ const audiences = [
         </p>
       </div>
 
-      <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <!-- Großes Bild links oben -->
-        <div class="md:col-span-2 md:row-span-2 overflow-hidden rounded-2xl shadow-lg">
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Großes Bild -->
+        <div class="md:col-span-2 overflow-hidden rounded-2xl shadow-lg">
           <Image
             src={keelcrabUnder}
             alt="Keelcrab unter Wasser am Bootsrumpf"
             width={800}
-            height={800}
+            height={500}
             class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
           />
         </div>
 
-        <!-- Rechts oben -->
+        <!-- Vor der Reinigung -->
+        <div class="overflow-hidden rounded-2xl shadow-lg">
+          <Image
+            src={keelcrabDirty}
+            alt="Bootsrumpf vor der Keelcrab-Reinigung"
+            width={400}
+            height={400}
+            class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+          />
+        </div>
+
+        <!-- Frontal -->
         <div class="overflow-hidden rounded-2xl shadow-lg">
           <Image
             src={keelcrabFrontal}
@@ -227,7 +240,18 @@ const audiences = [
           />
         </div>
 
-        <!-- Rechts unten -->
+        <!-- Schnelle Reinigung -->
+        <div class="overflow-hidden rounded-2xl shadow-lg">
+          <Image
+            src={keelcrabFrontalFast}
+            alt="Keelcrab bei schneller Reinigung"
+            width={400}
+            height={400}
+            class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+          />
+        </div>
+
+        <!-- In der Sonne -->
         <div class="overflow-hidden rounded-2xl shadow-lg">
           <Image
             src={keelcrabFrontalSunshine}
@@ -239,7 +263,7 @@ const audiences = [
         </div>
 
         <!-- Unten breit -->
-        <div class="lg:col-span-2 overflow-hidden rounded-2xl shadow-lg">
+        <div class="md:col-span-2 overflow-hidden rounded-2xl shadow-lg">
           <Image
             src={keelcrabBottom}
             alt="Keelcrab von unten"
