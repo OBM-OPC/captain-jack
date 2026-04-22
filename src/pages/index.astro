@@ -16,6 +16,7 @@ import keelcrabOnBoat from '../assets/images/keelcrab_on_boat.png';
 import keelcrabUnder from '../assets/images/keelcrab_under.png';
 import keelcrabFrontalSunshine from '../assets/images/keelcrab_frontal_sunshine.png';
 import captainJackStorageCar from '../assets/images/captain-jack_storage_car.JPG';
+import logo from '../assets/images/captain-jack-logo.png';
 ---
 
 <Layout title="Bootslagerung & Keelcrab Service Preveza" description="Captain Jack - Moderne Bootslagerung und smarter Bootsservice in Preveza. Exklusive Keelcrab®-Technologie in Griechenland.">
@@ -36,7 +37,9 @@ import captainJackStorageCar from '../assets/images/captain-jack_storage_car.JPG
     </div>
     
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-      <div class="max-w-3xl text-left">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <!-- Left: Text Content -->
+        <div class="max-w-3xl text-left flex-1">
         <!-- Badge -->
         <div class="inline-flex items-center px-3 py-1.5 bg-amber-500/15 border border-amber-500/40 rounded-full text-sm font-medium text-amber-400">
           <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -61,6 +64,21 @@ import captainJackStorageCar from '../assets/images/captain-jack_storage_car.JPG
           Exklusive Keelcrab®-Technologie in Griechenland
         </div>
       </div>
+
+      <!-- Right: Logo -->
+      <div class="hidden lg:flex flex-shrink-0 items-center justify-center">
+        <div class="w-80 h-80 relative">
+          <Image 
+            src={logo} 
+            alt="Captain Jack Logo" 
+            class="w-full h-full object-contain drop-shadow-2xl"
+            width={400}
+            height={400}
+            loading="eager"
+          />
+        </div>
+      </div>
+    </div>
     </div>
   </section>
 
