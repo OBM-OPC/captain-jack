@@ -1,7 +1,4 @@
 ---
-import { Image } from 'astro:assets';
-import logo from '../assets/images/captain-jack-logo.png';
-
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/ueber-uns", label: "Über uns" },
@@ -22,37 +19,24 @@ const currentPath = Astro.url.pathname;
         <span class="text-2xl font-bold text-[#0A2540] tracking-wide" style="font-family: 'Cinzel', serif;">Captain Jack</span>
       </a>
 
-      <!-- Desktop Navigation + Logo rechts -->
-      <div class="hidden md:flex items-center gap-6">
-        <div class="flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a 
-              href={link.href} 
-              class={`text-sm font-medium transition-colors duration-150 ${
-                currentPath === link.href 
-                  ? "text-[#00c2d1]" 
-                  : "text-gray-600 hover:text-gray-900"
-              }`}
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
-
-        <!-- Logo Image rechts, groß -->
-        <div class="h-16 w-auto">
-          <Image 
-            src={logo} 
-            alt="Captain Jack Logo" 
-            class="h-full w-auto object-contain"
-            width={200}
-            height={64}
-          />
-        </div>
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center gap-8">
+        {navLinks.map((link) => (
+          <a 
+            href={link.href} 
+            class={`text-sm font-medium transition-colors duration-150 ${
+              currentPath === link.href 
+                ? "text-[#00c2d1]" 
+                : "text-gray-600 hover:text-gray-900"
+            }`}
+          >
+            {link.label}
+          </a>
+        ))}
       </div>
 
       <!-- CTA Button (Desktop) -->
-      <div class="hidden lg:block">
+      <div class="hidden md:block">
         <a 
           href="tel:+306984447868" 
           class="inline-flex items-center gap-2 px-5 py-2.5 bg-[#00c2d1] text-white text-sm font-medium rounded-lg hover:bg-[#00a8b5] transition-all duration-200 hover:shadow-md active:scale-[0.97]"
