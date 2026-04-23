@@ -48,7 +48,7 @@ const currentPath = Astro.url.pathname;
         <a 
           id="nav-cta"
           href="/kontakt" 
-          class="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/10 px-6 py-3 text-sm font-medium text-white backdrop-blur-sm transition-all duration-300 hover:border-[#00c2d1] hover:bg-[#00c2d1] hover:text-white hover:shadow-md active:scale-[0.97]"
+          class="inline-flex items-center gap-2 rounded-lg border border-white/30 bg-white px-6 py-3 text-sm font-medium text-[#0A2540] shadow-sm transition-all duration-300 hover:border-white hover:bg-white/90 hover:text-[#0A2540] active:scale-[0.97]"
         >
           Kontakt
         </a>
@@ -169,12 +169,12 @@ const currentPath = Astro.url.pathname;
     btn?.classList.toggle('bg-white', isScrolled);
     btn?.classList.toggle('text-gray-700', isScrolled);
 
-    navCta?.classList.toggle('border-white/20', !isScrolled);
-    navCta?.classList.toggle('bg-white/10', !isScrolled);
-    navCta?.classList.toggle('text-white', !isScrolled);
-    navCta?.classList.toggle('border-[#00c2d1]', isScrolled);
-    navCta?.classList.toggle('bg-[#00c2d1]', isScrolled);
-    navCta?.classList.toggle('text-white', isScrolled);
+    navCta?.classList.toggle('border-white/30', !isScrolled);
+    navCta?.classList.toggle('bg-white', !isScrolled);
+    navCta?.classList.toggle('text-[#0A2540]', !isScrolled);
+    navCta?.classList.toggle('border-slate-200', isScrolled);
+    navCta?.classList.toggle('bg-white', isScrolled);
+    navCta?.classList.toggle('text-[#0A2540]', isScrolled);
 
     navLinks?.querySelectorAll('a').forEach((link) => {
       if (link.classList.contains('text-[#00c2d1]')) return;
