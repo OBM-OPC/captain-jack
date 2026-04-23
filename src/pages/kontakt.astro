@@ -1,134 +1,171 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from 'astro:assets';
+import ourStore from '../assets/images/our_store.jpg';
+import prevezaPromenade from '../assets/images/preveza_promenade.png';
 ---
 
-<Layout title="Kontakt" description="Kontaktieren Sie Captain Jack in Preveza. Gosia spricht Deutsch und Griechisch. Erreichbar per Telefon, WhatsApp und Formular.">
+<Layout title="Kontakt" description="Kontaktieren Sie Captain Jack in Preveza. Persönlich erreichbar für Storage, Parking, Bootsreinigung und Service.">
 
-  <!-- Hero -->
-  <section class="relative flex min-h-[560px] items-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 text-white">
+  <section class="relative flex min-h-[560px] items-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 text-white">
+    <div class="absolute inset-0 opacity-25">
+      <Image
+        src={prevezaPromenade}
+        alt="Preveza Promenade"
+        width={1600}
+        height={900}
+        class="h-full w-full object-cover"
+      />
+      <div class="absolute inset-0 bg-[#0A2540]/70"></div>
+    </div>
+
     <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
       <div class="max-w-3xl text-left">
-        <p class="text-[#00c2d1] text-sm font-medium tracking-wider uppercase mb-3">Kontakt</p>
-        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Sprechen Sie uns an</h1>
-        <p class="text-lg text-slate-300">Wir sprechen Deutsch und Englisch. Schnelle Antwort, persönliche Beratung.</p>
+        <p class="mb-3 text-sm font-medium uppercase tracking-wider text-[#00c2d1]">Kontakt</p>
+        <h1 class="mb-6 text-4xl font-bold leading-tight md:text-5xl">Direkt erreichbar, wenn es um Ihr Boot geht</h1>
+        <p class="text-lg text-slate-300 md:text-xl">
+          Ob Storage, Parking, Bootsreinigung oder ein konkretes Anliegen vor Ort in Preveza — schreiben oder rufen Sie uns an.
+          Sie sprechen direkt mit uns, nicht mit einer Hotline.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-
-        <!-- Left: Contact Options + Form -->
+  <section class="bg-white py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-[1.05fr_0.95fr]">
         <div>
-          <h2 class="text-3xl font-bold text-gray-900 mb-8">Direkt erreichen</h2>
+          <div class="mb-10 max-w-2xl">
+            <p class="mb-3 text-sm font-medium uppercase tracking-wider text-[#00c2d1]">So erreichen Sie uns</p>
+            <h2 class="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">Schnell, persönlich und unkompliziert</h2>
+            <p class="text-lg text-gray-600">
+              Für viele Fragen reicht eine kurze Nachricht. Wenn es schneller gehen soll, rufen Sie uns direkt an oder schreiben Sie per WhatsApp.
+            </p>
+          </div>
 
-          <!-- Phone DE -->
-          <a href="tel:+491754271476" class="block bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-all duration-200 group mb-4">
-            <div class="flex items-start gap-4">
-              <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-blue-200 transition-colors">
-                <svg class="w-7 h-7 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+          <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+            <a href="tel:+491754271476" class="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+              <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-100 text-blue-600">
+                <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
               </div>
+              <p class="text-sm font-medium uppercase tracking-wide text-slate-500">Deutsch / English</p>
+              <p class="mt-2 text-2xl font-bold text-[#0A2540]">+49 175 4271476</p>
+              <p class="mt-3 text-gray-600">Direkt anrufen oder per WhatsApp schreiben.</p>
+            </a>
+
+            <a href="tel:+306984477868" class="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+              <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-600">
+                <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+              </div>
+              <p class="text-sm font-medium uppercase tracking-wide text-slate-500">Griechenland</p>
+              <p class="mt-2 text-2xl font-bold text-[#0A2540]">+30 698 447 7868</p>
+              <p class="mt-3 text-gray-600">Ideal für schnelle Abstimmung direkt vor Ort in Preveza.</p>
+            </a>
+          </div>
+
+          <div class="mt-5 rounded-3xl bg-green-500 p-6 text-white shadow-lg">
+            <div class="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
               <div>
-                <h3 class="text-lg font-semibold text-gray-900">Deutsch / English</h3>
-                <p class="text-2xl font-bold text-blue-600 mt-1">+49 175 4271476</p>
-                <p class="text-gray-500 mt-2">Auch per WhatsApp erreichbar</p>
+                <p class="text-sm font-medium uppercase tracking-wide text-green-100">WhatsApp</p>
+                <h3 class="mt-2 text-2xl font-bold">Am schnellsten per Nachricht</h3>
+                <p class="mt-2 text-green-50">Wenn Sie direkt schreiben möchten, antworten wir schnell und unkompliziert.</p>
               </div>
+              <a href="https://wa.me/306984477868" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-2xl bg-white px-6 py-3 font-semibold text-green-600 transition hover:bg-green-50">
+                WhatsApp öffnen
+              </a>
             </div>
-          </a>
+          </div>
 
-          <!-- Phone GR -->
-          <a href="tel:+306984477868" class="block bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-all duration-200 group mb-4">
-            <div class="flex items-start gap-4">
-              <div class="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-200 transition-colors">
-                <svg class="w-7 h-7 text-emerald-600" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
-              </div>
-              <div>
-                <h3 class="text-lg font-semibold text-gray-900">Griechenland</h3>
-                <p class="text-2xl font-bold text-emerald-600 mt-1">+30 698 447 7868</p>
-                <p class="text-gray-500 mt-2">Auch per WhatsApp erreichbar</p>
-              </div>
-            </div>
-          </a>
+          <div class="mt-10 rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-sm">
+            <p class="mb-3 text-sm font-medium uppercase tracking-wider text-[#00c2d1]">Kontaktformular</p>
+            <h3 class="mb-6 text-2xl font-bold text-gray-900">Oder schreiben Sie uns hier</h3>
 
-          <!-- WhatsApp Button -->
-          <a href="https://wa.me/306984477868" target="_blank" rel="noopener" class="block bg-green-500 rounded-2xl p-6 hover:shadow-lg hover:bg-green-600 transition-all duration-200 active:scale-[0.97] mb-8">
-            <div class="flex items-center gap-4">
-              <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center">
-                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
-              </div>
-              <div class="text-white">
-                <h3 class="text-lg font-semibold">WhatsApp</h3>
-                <p class="text-green-100">Schnell & unkompliziert schreiben</p>
-              </div>
-              <svg class="ml-auto w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            </div>
-          </a>
+            <form name="contact" method="POST" data-netlify="true" class="space-y-5">
+              <input type="hidden" name="form-name" value="contact" />
 
-          <!-- Contact Form -->
-          <h2 class="text-3xl font-bold text-gray-900 mb-6">Oder schreiben Sie uns</h2>
-          <form name="contact" method="POST" data-netlify="true" class="space-y-5">
-            <input type="hidden" name="form-name" value="contact" />
-            <div>
-              <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
-              <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#00c2d1] focus:ring-1 focus:ring-[#00c2d1] outline-none transition-colors" placeholder="Ihr Name" />
-            </div>
-            <div>
-              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-Mail</label>
-              <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#00c2d1] focus:ring-1 focus:ring-[#00c2d1] outline-none transition-colors" placeholder="ihre@email.de" />
-            </div>
-            <div>
-              <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Betreff</label>
-              <select id="subject" name="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#00c2d1] focus:ring-1 focus:ring-[#00c2d1] outline-none transition-colors">
-                <option value="">Bitte wählen...</option>
-                <option value="storage">Storage</option>
-                <option value="parking">Parking</option>
-                <option value="keelcrab">Keelcrab Reinigung</option>
-                <option value="service">Service & Wartung</option>
-                <option value="sonstiges">Sonstiges</option>
-              </select>
-            </div>
-            <div>
-              <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Nachricht</label>
-              <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#00c2d1] focus:ring-1 focus:ring-[#00c2d1] outline-none transition-colors" placeholder="Wie können wir Ihnen helfen?"></textarea>
-            </div>
-            <button type="submit" class="btn-primary btn-primary-md w-full">Nachricht senden</button>
-          </form>
-        </div>
-
-        <!-- Right: Location -->
-        <div>
-          <h2 class="text-3xl font-bold text-gray-900 mb-8">Standort</h2>
-
-          <div class="space-y-6 mb-8">
-            <div class="bg-gray-50 rounded-2xl p-6">
-              <div class="flex items-start gap-4">
-                <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                <div>
+                  <label for="name" class="mb-1 block text-sm font-medium text-gray-700">Name</label>
+                  <input type="text" id="name" name="name" required class="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none transition focus:border-[#00c2d1] focus:ring-1 focus:ring-[#00c2d1]" placeholder="Ihr Name" />
                 </div>
                 <div>
-                  <h3 class="text-lg font-semibold text-gray-900">Hauptstandort</h3>
-                  <address class="not-italic text-gray-600 mt-2">
-                    Leofóros Ioanninon 215<br/>
-                    Preveza Stadthafen<br/>
-                    Griechenland
-                  </address>
+                  <label for="email" class="mb-1 block text-sm font-medium text-gray-700">E-Mail</label>
+                  <input type="email" id="email" name="email" required class="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none transition focus:border-[#00c2d1] focus:ring-1 focus:ring-[#00c2d1]" placeholder="ihre@email.de" />
                 </div>
               </div>
-            </div>
+
+              <div>
+                <label for="subject" class="mb-1 block text-sm font-medium text-gray-700">Worum geht es?</label>
+                <select id="subject" name="subject" class="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none transition focus:border-[#00c2d1] focus:ring-1 focus:ring-[#00c2d1]">
+                  <option value="">Bitte wählen...</option>
+                  <option value="storage">Storage</option>
+                  <option value="parking">Parking</option>
+                  <option value="bootsreinigung">Bootsreinigung</option>
+                  <option value="service">Service</option>
+                  <option value="sonstiges">Sonstiges</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="message" class="mb-1 block text-sm font-medium text-gray-700">Nachricht</label>
+                <textarea id="message" name="message" rows="6" required class="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none transition focus:border-[#00c2d1] focus:ring-1 focus:ring-[#00c2d1]" placeholder="Wobei können wir Ihnen helfen?"></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary btn-primary-lg w-full sm:w-auto">Nachricht senden</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="space-y-8">
+          <div class="overflow-hidden rounded-3xl shadow-xl">
+            <Image
+              src={ourStore}
+              alt="Captain Jack Standort in Preveza"
+              width={900}
+              height={700}
+              class="h-full w-full object-cover"
+            />
           </div>
 
-          <!-- Map Placeholder -->
-          <div class="aspect-video rounded-2xl bg-gray-200 flex items-center justify-center">
-            <div class="text-center p-8">
-              <div class="w-16 h-16 mx-auto bg-gray-300 rounded-full flex items-center justify-center mb-4">
-                <svg class="w-8 h-8 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+            <p class="mb-3 text-sm font-medium uppercase tracking-wider text-[#00c2d1]">Standort</p>
+            <h2 class="mb-4 text-3xl font-bold text-gray-900">Captain Jack in Preveza</h2>
+            <p class="mb-6 text-lg text-gray-600">
+              Unser Standort ist die Basis für Storage, Parking, Service und Einsätze rund um Ihr Boot. Vor Ort sind wir schnell erreichbar und flexibel in der Abstimmung.
+            </p>
+
+            <div class="space-y-5">
+              <div class="rounded-2xl bg-slate-50 p-5">
+                <p class="font-semibold text-[#0A2540]">Adresse</p>
+                <address class="mt-2 not-italic text-gray-600">
+                  Leofóros Ioanninon 215<br />
+                  Preveza Stadthafen<br />
+                  Griechenland
+                </address>
               </div>
-              <p class="text-gray-500">Google Maps wird hier eingebunden</p>
+
+              <div class="rounded-2xl bg-slate-50 p-5">
+                <p class="font-semibold text-[#0A2540]">Gut zu wissen</p>
+                <ul class="mt-3 space-y-2 text-gray-600">
+                  <li>• Persönlicher Kontakt statt anonymer Abwicklung</li>
+                  <li>• Schnelle Abstimmung per Telefon oder WhatsApp</li>
+                  <li>• Passende Lösungen für Storage, Parking und Bootsreinigung</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Lassen Sie uns direkt über Ihr Anliegen sprechen</h2>
+      <p class="text-xl text-slate-300 mb-8">Wenn Sie schon wissen, was Sie brauchen, melden Sie sich direkt bei uns. Wenn noch Fragen offen sind, klären wir sie gemeinsam.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/kontakt" class="btn-primary btn-primary-lg">Jetzt Kontakt aufnehmen</a>
+        <a href="/leistungen" class="btn-secondary btn-secondary-lg">Leistungen ansehen</a>
       </div>
     </div>
   </section>
