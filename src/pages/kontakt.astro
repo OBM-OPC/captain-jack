@@ -111,6 +111,15 @@ import prevezaPromenade from '../assets/images/preveza_promenade.png';
                 <textarea id="message" name="message" rows="6" required class="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none transition focus:border-[#00c2d1] focus:ring-1 focus:ring-[#00c2d1]" placeholder="Wobei können wir Ihnen helfen?"></textarea>
               </div>
 
+              <label for="privacy" class="flex items-start gap-3 rounded-2xl border border-slate-200 bg-white p-4 text-sm text-gray-600">
+                <input type="checkbox" id="privacy" name="privacy" required class="mt-1 h-4 w-4 rounded border-slate-300 text-[#00c2d1] focus:ring-[#00c2d1]" />
+                <span>
+                  Ich habe die <a href="/datenschutz" class="font-medium text-[#0A2540] underline underline-offset-2 hover:text-[#00c2d1]">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Angaben zur Bearbeitung meiner Anfrage zu. *
+                </span>
+              </label>
+
+              <p class="text-sm text-gray-500">* Pflichtfelder</p>
+
               <button type="submit" class="btn-primary btn-primary-lg w-full sm:w-auto">Nachricht senden</button>
             </form>
           </div>
