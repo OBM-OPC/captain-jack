@@ -331,21 +331,52 @@ const audiences = [
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-4xl text-center">
         <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-[#00c2d1]">Zielgruppe</p>
-        <h2 class="mb-12 text-3xl font-bold text-gray-900 md:text-4xl">Für wen ist Keelcrab geeignet?</h2>
+        <h2 class="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">Auch für Charterer und Marinas</h2>
+        <p class="mx-auto mb-12 max-w-3xl text-lg text-gray-600">
+          Keelcrab ist ideal für Flotten, Charterunternehmen und Marinas, die Boote schnell wieder einsatzbereit machen,
+          Standzeiten reduzieren und ihren Kunden einen sauberen, gepflegten Eindruck bieten möchten.
+        </p>
       </div>
 
-      <div class="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2">
-        {audiences.map((audience) => (
-          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-8 text-left shadow-sm">
-            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-600">
-              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-              </svg>
+      <div class="mx-auto grid max-w-6xl grid-cols-1 gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+        <div class="rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-sm">
+          <h3 class="mb-6 text-2xl font-bold text-[#0A2540]">Ihre Vorteile auf einen Blick</h3>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="rounded-2xl bg-white p-5 border border-slate-200">
+              <p class="font-semibold text-[#0A2540]">Weniger Ausfallzeit</p>
+              <p class="mt-2 text-gray-600">Boote kommen schneller zurück in die Vermietung oder an den Steg – ohne Kranen und ohne lange Wartezeiten.</p>
             </div>
-            <h3 class="mb-2 text-xl font-bold text-[#0A2540]">{audience.title}</h3>
-            <p class="text-gray-600">{audience.text}</p>
+            <div class="rounded-2xl bg-white p-5 border border-slate-200">
+              <p class="font-semibold text-[#0A2540]">Mobiler Einsatz</p>
+              <p class="mt-2 text-gray-600">Reinigung direkt im Hafen, am Liegeplatz oder nach Absprache an anderen Standorten und am Anker.</p>
+            </div>
+            <div class="rounded-2xl bg-white p-5 border border-slate-200">
+              <p class="font-semibold text-[#0A2540]">Besserer Eindruck</p>
+              <p class="mt-2 text-gray-600">Saubere Bootsrümpfe wirken professionell, gepflegt und steigern die Wahrnehmung Ihrer Flotte oder Marina.</p>
+            </div>
+            <div class="rounded-2xl bg-white p-5 border border-slate-200">
+              <p class="font-semibold text-[#0A2540]">Planbare Kosten</p>
+              <p class="mt-2 text-gray-600">Klare Kalkulation pro Bootslänge statt unübersichtlicher Stundensätze – ideal für wiederkehrende Einsätze.</p>
+            </div>
           </div>
-        ))}
+        </div>
+
+        <div class="rounded-3xl bg-gradient-to-br from-[#0A2540] via-[#12385a] to-[#0A2540] p-8 text-white shadow-lg">
+          <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-[#00c2d1]">CTA</p>
+          <h3 class="mb-4 text-2xl font-bold">Sie betreiben Charter oder Marina?</h3>
+          <p class="mb-6 text-slate-300">
+            Dann lassen Sie uns über eine flexible Lösung für Ihre Flotte oder Ihren Standort sprechen.
+          </p>
+          <ul class="mb-8 space-y-3 text-sm text-slate-200">
+            <li class="flex items-start gap-3"><span class="text-[#00c2d1]">✓</span><span>Schnelle Einsatzplanung</span></li>
+            <li class="flex items-start gap-3"><span class="text-[#00c2d1]">✓</span><span>Ideal für mehrere Boote</span></li>
+            <li class="flex items-start gap-3"><span class="text-[#00c2d1]">✓</span><span>Persönliches Angebot auf Anfrage</span></li>
+          </ul>
+          <div class="flex flex-col gap-3">
+            <a href="/kontakt" class="btn-primary btn-primary-lg text-center">Jetzt Anfrage senden</a>
+            <a href="/kontakt" class="btn-secondary btn-secondary-lg text-center">Beratung anfragen</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
