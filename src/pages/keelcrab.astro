@@ -7,6 +7,8 @@ import keelcrabUnder from "../assets/images/keelcrab_under.png";
 import keelcrabFrontal from "../assets/images/keelcrab_frontal.png";
 import keelcrabFrontalSunshine from "../assets/images/keelcrab_frontal_sunshine.png";
 import keelcrabBottom from "../assets/images/keelcrab_bottom.webp";
+import keelcrabDirty from "../assets/images/keelcrab_dirty.png";
+import keelcrabFrontalFast from "../assets/images/keelcrab_frontal_fast.png";
 
 const benefits = [
   {
@@ -154,26 +156,20 @@ const audiences = [
               <span class="text-lg font-bold">1</span>
             </div>
             <h3 class="mb-3 text-2xl font-bold text-[#0A2540]">Einsatz vor Ort</h3>
-            <p class="text-gray-600">Der Roboter wird direkt am Boot ins Wasser gesetzt</p>
+            <p class="text-gray-600">Nach Absprache führen wir die Bootreinigung auch direkt beim Kunden durch – im anderen Hafen, am Liegeplatz oder sogar am Anker.</p>
           </div>
         </div>
 
-        <div class="relative overflow-hidden rounded-3xl bg-white shadow-sm border border-slate-200">
-          <div class="aspect-[4/3] overflow-hidden">
-            <Image
-              src={keelcrabUnder}
-              alt="Keelcrab unter Wasser im Einsatz"
-              width={600}
-              height={450}
-              class="h-full w-full object-cover"
-            />
+        <div class="relative overflow-hidden rounded-3xl bg-white p-8 shadow-sm border border-slate-200">
+          <div class="absolute right-6 top-5 text-6xl font-bold leading-none text-slate-100">
+            02
           </div>
-          <div class="p-8">
+          <div class="relative">
             <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0A2540] text-white">
               <span class="text-lg font-bold">2</span>
             </div>
             <h3 class="mb-3 text-2xl font-bold text-[#0A2540]">Reinigung & Inspektion</h3>
-            <p class="text-gray-600">Bürsten entfernen Bewuchs, Kamera überprüft den Zustand</p>
+            <p class="text-gray-600">Keelcrab entfernt Bewuchs direkt im Wasser – effizient, materialschonend und ohne Kranen oder lange Ausfallzeiten.</p>
           </div>
         </div>
 
@@ -185,8 +181,8 @@ const audiences = [
             <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0A2540] text-white">
               <span class="text-lg font-bold">3</span>
             </div>
-            <h3 class="mb-3 text-2xl font-bold text-[#0A2540]">Auswertung</h3>
-            <p class="text-gray-600">Du erhältst Bilder und Einblicke zum Rumpfzustand</p>
+            <h3 class="mb-3 text-2xl font-bold text-[#0A2540]">Genießen & profitieren</h3>
+            <p class="text-gray-600">Freuen Sie sich über bessere Performance, weniger Verbrauch und einen sauberen Rumpf – mit allen Keelcrab Benefits auf einen Schlag.</p>
           </div>
         </div>
       </div>
@@ -204,30 +200,36 @@ const audiences = [
         </p>
       </div>
 
-      <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <!-- Großes Bild links oben -->
-        <div class="md:col-span-2 md:row-span-2 overflow-hidden rounded-2xl shadow-lg">
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Großes Bild -->
+        <div class="md:col-span-2 overflow-hidden rounded-2xl shadow-lg">
           <Image
             src={keelcrabUnder}
             alt="Keelcrab unter Wasser am Bootsrumpf"
             width={800}
-            height={800}
+            height={500}
             class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
           />
         </div>
 
-        <!-- Rechts oben -->
+        <!-- Vor der Reinigung -->
         <div class="overflow-hidden rounded-2xl shadow-lg">
           <Image
-            src={keelcrabFrontal}
-            alt="Keelcrab Frontalansicht"
+            src={keelcrabDirty}
+            alt="Bootsrumpf vor der Keelcrab-Reinigung"
             width={400}
             height={400}
             class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
           />
         </div>
 
-        <!-- Rechts unten -->
+        <!-- Frontal -->
+        <!-- Bild entfernt: keelcrab_frontal.png -->
+
+        <!-- Schnelle Reinigung -->
+        <!-- Bild entfernt: keelcrab_frontal_fast.png -->
+
+        <!-- In der Sonne -->
         <div class="overflow-hidden rounded-2xl shadow-lg">
           <Image
             src={keelcrabFrontalSunshine}
@@ -238,11 +240,11 @@ const audiences = [
           />
         </div>
 
-        <!-- Unten breit -->
-        <div class="lg:col-span-2 overflow-hidden rounded-2xl shadow-lg">
+        <!-- Unten breit: on_boat -->
+        <div class="md:col-span-2 overflow-hidden rounded-2xl shadow-lg">
           <Image
-            src={keelcrabBottom}
-            alt="Keelcrab von unten"
+            src={keelcrabOnBoat}
+            alt="Keelcrab am Boot im Einsatz"
             width={800}
             height={400}
             class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
@@ -272,17 +274,21 @@ const audiences = [
             ))}
           </div>
 
-          <div class="mt-8 rounded-2xl border border-[#00c2d1]/20 bg-gradient-to-r from-[#00c2d1]/10 to-[#00c2d1]/5 p-6">
-            <p class="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-[#00c2d1]">Highlight</p>
-            <p class="text-xl font-bold text-[#0A2540]">Abdeckung bis zu 20 m (mit Ultraschall-System)</p>
+          <div class="mt-8 rounded-2xl border border-[#00c2d1]/20 bg-gradient-to-r from-[#0A2540] to-[#12385a] p-6 text-white">
+            <h3 class="mb-3 text-2xl font-bold">Interesse an einer Keelcrab-Reinigung?</h3>
+            <p class="mb-5 text-slate-300">Sprechen Sie mit uns über einen flexiblen Einsatz in Preveza, im Hafen oder direkt bei Ihrem Boot.</p>
+            <div class="flex flex-wrap gap-3">
+              <a href="/kontakt" class="btn-primary">Jetzt Anfrage senden</a>
+              <a href="/kontakt" class="btn-secondary">Beratung anfragen</a>
+            </div>
           </div>
         </div>
 
         <div class="order-1 lg:order-2">
           <div class="overflow-hidden rounded-[2rem] shadow-xl ring-1 ring-slate-200">
             <Image
-              src={keelcrabOnBoat}
-              alt="Keelcrab am Boot im Einsatz"
+              src={keelcrabFrontalFast}
+              alt="Keelcrab frontal im Einsatz"
               width={1200}
               height={900}
               class="h-full w-full object-cover"
@@ -329,21 +335,51 @@ const audiences = [
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-4xl text-center">
         <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-[#00c2d1]">Zielgruppe</p>
-        <h2 class="mb-12 text-3xl font-bold text-gray-900 md:text-4xl">Für wen ist Keelcrab geeignet?</h2>
+        <h2 class="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">Auch für Charterer und Marinas</h2>
+        <p class="mx-auto mb-12 max-w-3xl text-lg text-gray-600">
+          Keelcrab ist ideal für Flotten, Charterunternehmen und Marinas, die Boote schnell wieder einsatzbereit machen,
+          Standzeiten reduzieren und ihren Kunden einen sauberen, gepflegten Eindruck bieten möchten.
+        </p>
       </div>
 
-      <div class="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2">
-        {audiences.map((audience) => (
-          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-8 text-left shadow-sm">
-            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-600">
-              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-              </svg>
+      <div class="mx-auto grid max-w-6xl grid-cols-1 gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+        <div class="rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-sm">
+          <h3 class="mb-6 text-2xl font-bold text-[#0A2540]">Ihre Vorteile auf einen Blick</h3>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="rounded-2xl bg-white p-5 border border-slate-200">
+              <p class="font-semibold text-[#0A2540]">Weniger Ausfallzeit</p>
+              <p class="mt-2 text-gray-600">Boote kommen schneller zurück in die Vermietung oder an den Steg – ohne Kranen und ohne lange Wartezeiten.</p>
             </div>
-            <h3 class="mb-2 text-xl font-bold text-[#0A2540]">{audience.title}</h3>
-            <p class="text-gray-600">{audience.text}</p>
+            <div class="rounded-2xl bg-white p-5 border border-slate-200">
+              <p class="font-semibold text-[#0A2540]">Mobiler Einsatz</p>
+              <p class="mt-2 text-gray-600">Reinigung direkt im Hafen, am Liegeplatz oder nach Absprache an anderen Standorten und am Anker.</p>
+            </div>
+            <div class="rounded-2xl bg-white p-5 border border-slate-200">
+              <p class="font-semibold text-[#0A2540]">Besserer Eindruck</p>
+              <p class="mt-2 text-gray-600">Saubere Bootsrümpfe wirken professionell, gepflegt und steigern die Wahrnehmung Ihrer Flotte oder Marina.</p>
+            </div>
+            <div class="rounded-2xl bg-white p-5 border border-slate-200">
+              <p class="font-semibold text-[#0A2540]">Planbare Kosten</p>
+              <p class="mt-2 text-gray-600">Klare Kalkulation pro Bootslänge statt unübersichtlicher Stundensätze – ideal für wiederkehrende Einsätze.</p>
+            </div>
           </div>
-        ))}
+        </div>
+
+        <div class="rounded-3xl bg-gradient-to-br from-[#0A2540] via-[#12385a] to-[#0A2540] p-8 text-white shadow-lg">
+          <h3 class="mb-4 text-2xl font-bold">Sie betreiben Charter oder Marina?</h3>
+          <p class="mb-6 text-slate-300">
+            Dann lassen Sie uns über eine flexible Lösung für Ihre Flotte oder Ihren Standort sprechen.
+          </p>
+          <ul class="mb-8 space-y-3 text-sm text-slate-200">
+            <li class="flex items-start gap-3"><span class="text-[#00c2d1]">✓</span><span>Schnelle Einsatzplanung</span></li>
+            <li class="flex items-start gap-3"><span class="text-[#00c2d1]">✓</span><span>Ideal für mehrere Boote</span></li>
+            <li class="flex items-start gap-3"><span class="text-[#00c2d1]">✓</span><span>Persönliches Angebot auf Anfrage</span></li>
+          </ul>
+          <div class="flex flex-col gap-3">
+            <a href="/kontakt" class="btn-primary btn-primary-lg text-center">Jetzt Anfrage senden</a>
+            <a href="/kontakt" class="btn-secondary btn-secondary-lg text-center">Beratung anfragen</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>

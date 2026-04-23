@@ -133,14 +133,14 @@ import logo from '../assets/images/captain-jack-logo.png';
           </a>
         </div>
 
-        <!-- Technologie -->
+        <!-- Bootsreinigung -->
         <div class="bg-gradient-to-br from-[#00c2d1]/5 to-[#00c2d1]/10 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow border border-[#00c2d1]/20">
           <div class="w-12 h-12 bg-[#00c2d1] rounded-xl flex items-center justify-center mb-6">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Technologie</h3>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Bootsreinigung</h3>
           <p class="text-gray-600 mb-4">Keelcrab® Unterwasserreinigung und Drohnen-Inspektion mit Live-Bericht.</p>
           <a href="#keelcrab" class="link flex items-center">
             Mehr erfahren <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
@@ -167,12 +167,9 @@ import logo from '../assets/images/captain-jack-logo.png';
           </div>
           <h3 class="text-xl font-bold text-white mb-3">Kein sicherer Stellplatz</h3>
           <p class="text-white/70 mb-6">Der Heimathafen ist überfüllt, Trockendocks kostspielig. Wo lässt sich mein Boot wirklich gut aufbewahren?</p>
-          <button class="solution-btn btn-alert px-6 py-3" data-target="solution-1">
+          <a href="/leistungen#storage" class="btn-alert px-6 py-3 inline-flex items-center justify-center">
             Lösung anzeigen
-          </button>
-          <div id="solution-1" class="hidden mt-6 p-4 bg-white/10 backdrop-blur-sm rounded-lg text-white/90 text-sm border border-white/10">
-            Unsere klimatisierte Lagerhalle mit 24/7 Überwachung bietet maximalen Schutz für Ihr Boot.
-          </div>
+          </a>
         </div>
 
         <!-- Problem 2 -->
@@ -184,12 +181,9 @@ import logo from '../assets/images/captain-jack-logo.png';
           </div>
           <h3 class="text-xl font-bold text-white mb-3">Rumpf voller Bewuchs</h3>
           <p class="text-white/70 mb-6">Kran-Termine dauern Wochen. Der Rumpf verrottet im Hafen. Reinigen ist teuer und zeitaufwendig.</p>
-          <button class="solution-btn btn-alert px-6 py-3" data-target="solution-2">
+          <a href="/leistungen#keelcrab" class="btn-alert px-6 py-3 inline-flex items-center justify-center">
             Lösung anzeigen
-          </button>
-          <div id="solution-2" class="hidden mt-6 p-4 bg-white/10 backdrop-blur-sm rounded-lg text-white/90 text-sm border border-white/10">
-            Keelcrab® reinigt direkt im Wasser – ohne Kran, ohne Wartezeit, bis zu 70% günstiger als traditionelle Methoden.
-          </div>
+          </a>
         </div>
 
         <!-- Problem 3 -->
@@ -202,12 +196,9 @@ import logo from '../assets/images/captain-jack-logo.png';
           </div>
           <h3 class="text-xl font-bold text-white mb-3">Viele Anbieter, kein Überblick</h3>
           <p class="text-white/70 mb-6">Lager hier, Service dort, Dokumentation woanders. Fragmentierte Betreuung statt ganzheitlicher Lösung.</p>
-          <button class="solution-btn btn-alert px-6 py-3" data-target="solution-3">
+          <a href="/leistungen" class="btn-alert px-6 py-3 inline-flex items-center justify-center">
             Lösung anzeigen
-          </button>
-          <div id="solution-3" class="hidden mt-6 p-4 bg-white/10 backdrop-blur-sm rounded-lg text-white/90 text-sm border border-white/10">
-            Bei Captain Jack bekommen Sie alles aus einer Hand: Lagerung, Service, Reinigung und digitale Dokumentation.
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -300,7 +291,7 @@ import logo from '../assets/images/captain-jack-logo.png';
   </section>
 
   <!-- Keelcrab Video + Benefits -->
-  <section class="py-16 bg-white">
+  <section id="video" class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-10">
         <p class="text-[#00c2d1] text-sm font-medium tracking-wider uppercase mb-3">Live Erleben</p>
@@ -469,45 +460,36 @@ import logo from '../assets/images/captain-jack-logo.png';
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Step 1 -->
-        <div class="relative">
-          <div class="text-8xl font-bold text-gray-100 absolute -top-6 left-0">01</div>
-          <div class="relative pt-8">
-            <div class="w-14 h-14 bg-[#00c2d1] rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-              </svg>
+        <div class="relative overflow-hidden rounded-3xl bg-white p-8 shadow-sm border border-slate-200">
+          <div class="absolute right-6 top-5 text-6xl font-bold leading-none text-slate-100">01</div>
+          <div class="relative">
+            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0A2540] text-white">
+              <span class="text-lg font-bold">1</span>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">Termin online buchen</h3>
-            <p class="text-gray-600">Wählen Sie Ihren Wunschtermin. Wir übernehmen die gesamte Planung – schnell, unkompliziert und perfekt organisiert.</p>
+            <h3 class="mb-3 text-2xl font-bold text-[#0A2540]">Einsatz vor Ort</h3>
+            <p class="text-gray-600">Nach Absprache führen wir die Bootreinigung auch direkt beim Kunden durch – im anderen Hafen, am Liegeplatz oder sogar am Anker.</p>
           </div>
         </div>
 
-        <!-- Step 2 -->
-        <div class="relative">
-          <div class="text-8xl font-bold text-gray-100 absolute -top-6 left-0">02</div>
-          <div class="relative pt-8">
-            <div class="w-14 h-14 bg-[#00c2d1] rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-7 h-7 text-[#FFFFFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-              </svg>
+        <div class="relative overflow-hidden rounded-3xl bg-white p-8 shadow-sm border border-slate-200">
+          <div class="absolute right-6 top-5 text-6xl font-bold leading-none text-slate-100">02</div>
+          <div class="relative">
+            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0A2540] text-white">
+              <span class="text-lg font-bold">2</span>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">Boot abgeben – wir erledigen den Rest</h3>
-            <p class="text-gray-600">Bringen Sie Ihr Boot vorbei. Wir kümmern uns um Positionierung, Reinigung und Qualitätskontrolle – Sie müssen nichts tun.</p>
+            <h3 class="mb-3 text-2xl font-bold text-[#0A2540]">Reinigung & Inspektion</h3>
+            <p class="text-gray-600">Keelcrab entfernt Bewuchs direkt im Wasser – effizient, materialschonend und ohne Kranen oder lange Ausfallzeiten.</p>
           </div>
         </div>
 
-        <!-- Step 3 -->
-        <div class="relative">
-          <div class="text-8xl font-bold text-gray-100 absolute -top-6 left-0">03</div>
-          <div class="relative pt-8">
-            <div class="w-14 h-14 bg-[#00c2d1] rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-7 h-7 text-[#FFFFFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-              </svg>
+        <div class="relative overflow-hidden rounded-3xl bg-white p-8 shadow-sm border border-slate-200">
+          <div class="absolute right-6 top-5 text-6xl font-bold leading-none text-slate-100">03</div>
+          <div class="relative">
+            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0A2540] text-white">
+              <span class="text-lg font-bold">3</span>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">Abholen & Lossegeln</h3>
-            <p class="text-gray-600">Ihr Boot glänzt wie neu – mit detaillierter Dokumentation. Keine Trockenzeit, keine Wartezeit. Sofort segelfertig!</p>
+            <h3 class="mb-3 text-2xl font-bold text-[#0A2540]">Genießen & profitieren</h3>
+            <p class="text-gray-600">Freuen Sie sich über bessere Performance, weniger Verbrauch und einen sauberen Rumpf – mit allen Keelcrab Benefits auf einen Schlag.</p>
           </div>
         </div>
       </div>
@@ -730,24 +712,5 @@ import logo from '../assets/images/captain-jack-logo.png';
       });
     });
 
-    // Solution buttons — toggle between alert (red) and resolved (green)
-    document.querySelectorAll('.solution-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const targetId = btn.getAttribute('data-target');
-        const target = document.getElementById(targetId);
-        if (target) {
-          target.classList.toggle('hidden');
-          const isHidden = target.classList.contains('hidden');
-          btn.textContent = isHidden ? 'Lösung anzeigen' : 'Lösung ausblenden';
-          if (isHidden) {
-            btn.classList.remove('btn-alert-resolved');
-            btn.classList.add('btn-alert');
-          } else {
-            btn.classList.remove('btn-alert');
-            btn.classList.add('btn-alert-resolved');
-          }
-        }
-      });
-    });
   </script>
 </Layout>

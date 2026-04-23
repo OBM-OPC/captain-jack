@@ -3,17 +3,117 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from 'astro:assets';
 import captainJackStorageCar from '../assets/images/captain-jack_storage_car.JPG';
 import ourHome from '../assets/images/our_home.jpg';
+import keelcrabOnBoat from '../assets/images/keelcrab_on_boat.png';
 ---
 
 <Layout title="Leistungen" description="Captain Jack Leistungen — Storage, Parking, Service und Keelcrab Unterwasserreinigung in Preveza.">
 
   <!-- Hero -->
-  <section class="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-2xl">
+  <section class="relative overflow-hidden min-h-[600px] flex items-center">
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+      <Image
+        src={ourHome}
+        alt="Captain Jack Anlage in Preveza"
+        width={1920}
+        height={800}
+        class="h-full w-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-[#0A2540]/95 via-[#0A2540]/80 to-[#0A2540]/60"></div>
+    </div>
+    
+    <div class="relative mx-auto w-full max-w-[1600px] px-4 py-20 sm:px-6 lg:px-10 xl:px-16">
+      <div class="max-w-4xl text-left">
         <p class="text-[#00c2d1] text-sm font-medium tracking-wider uppercase mb-3">Unsere Leistungen</p>
-        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Alles aus einer Hand</h1>
-        <p class="text-lg text-slate-300">Storage, Parking, Service und Keelcrab® — alles, was Ihr Boot braucht, direkt hier in Preveza.</p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white">Alles aus einer Hand</h1>
+        <p class="text-lg text-slate-300 mb-8 max-w-2xl">Storage, Parking, Service und Keelcrab® — alles, was Ihr Boot braucht, direkt hier in Preveza.</p>
+        
+        <!-- Benefits -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Keelcrab Highlight -->
+  <section class="relative overflow-hidden bg-white py-20">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(0,194,209,0.08),_transparent_40%)]"></div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Left: Content -->
+        <div>
+          <div class="mb-6 inline-flex items-center rounded-full border border-[#00c2d1]/40 bg-[#00c2d1]/10 px-4 py-2 text-sm font-medium text-[#00c2d1]">
+            Exklusiv in Griechenland
+          </div>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0A2540] mb-4">
+            Bootsrumpf-Reinigung ohne Kranen
+          </h2>
+          <p class="text-lg text-slate-600 mb-8 max-w-xl">
+            Keelcrab® reinigt Ihren Bootsrumpf direkt im Wasser – ohne Auswasserung, ohne Chemie, ohne Wartezeit. 
+            Bis zu 70% günstiger als traditionelle Methoden.
+          </p>
+          
+          <!-- Benefits -->
+          <div class="grid grid-cols-2 gap-4 mb-8">
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-emerald-500 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <p class="font-semibold text-[#0A2540]">Ohne Auswasserung</p>
+                <p class="text-sm text-slate-500">Direkt im Wasser</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-emerald-500 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <p class="font-semibold text-[#0A2540]">70% günstiger</p>
+                <p class="text-sm text-slate-500">Als Trockendock</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-emerald-500 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <p class="font-semibold text-[#0A2540]">Umweltfreundlich</p>
+                <p class="text-sm text-slate-500">Keine Chemie</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-emerald-500 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <p class="font-semibold text-[#0A2540]">Live-Inspektion</p>
+                <p class="text-sm text-slate-500">Fotos & Videos</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- CTA -->
+          <div class="flex flex-wrap gap-4">
+            <a href="/kontakt" class="btn-primary btn-primary-lg">Jetzt anfragen</a>
+            <a href="/keelcrab" class="btn-secondary btn-secondary-lg">Mehr zu Keelcrab erfahren</a>
+          </div>
+        </div>
+        
+        <!-- Right: Image -->
+        <div class="hidden lg:block">
+          <div class="rounded-2xl overflow-hidden shadow-2xl">
+            <Image
+              src={keelcrabOnBoat}
+              alt="Keelcrab am Boot im Einsatz"
+              width={800}
+              height={600}
+              class="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -22,6 +122,32 @@ import ourHome from '../assets/images/our_home.jpg';
   <section id="storage" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <!-- Left: Visual + Car Storage -->
+        <div class="space-y-8">
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+            <Image 
+              src={captainJackStorageCar} 
+              alt="Sichere Trockenlagerung bei Captain Jack" 
+              class="w-full h-full object-cover"
+              width={800}
+              height={600}
+            />
+          </div>
+
+          <!-- Car Storage Highlight -->
+          <div class="bg-gradient-to-br from-amber-500/5 to-amber-500/10 rounded-2xl p-6 border border-amber-500/20">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-amber-500/15 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-900 mb-1">Exklusives Auto-Storage</h3>
+                <p class="text-gray-600 text-sm">Indoor-Überwinterung für exklusive Fahrzeuge. 225 €/Monat inkl. Strom. Zusätzlich: Auto gelegentlich starten, Batterie prüfen und weiterer Service auf Wunsch.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div>
           <p class="text-[#00c2d1] text-sm font-medium tracking-wider uppercase mb-3">Storage</p>
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Sichere Trockenlagerung</h2>
@@ -68,7 +194,6 @@ import ourHome from '../assets/images/our_home.jpg';
             </li>
           </ul>
 
-          <!-- Pricing -->
           <div class="bg-gray-50 rounded-2xl p-6 space-y-4">
             <h3 class="text-lg font-bold text-gray-900">Preise</h3>
             <div class="flex justify-between items-center py-2 border-b border-gray-200">
@@ -87,32 +212,6 @@ import ourHome from '../assets/images/our_home.jpg';
 
           <p class="text-sm text-gray-500 mt-4">Alles außer den genannten Preisen ist Sonderanfrage — wir finden eine Lösung.</p>
         </div>
-
-        <!-- Right: Visual + Car Storage -->
-        <div class="space-y-8">
-          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
-            <Image 
-              src={captainJackStorageCar} 
-              alt="Sichere Trockenlagerung bei Captain Jack" 
-              class="w-full h-full object-cover"
-              width={800}
-              height={600}
-            />
-          </div>
-
-          <!-- Car Storage Highlight -->
-          <div class="bg-gradient-to-br from-amber-500/5 to-amber-500/10 rounded-2xl p-6 border border-amber-500/20">
-            <div class="flex items-start gap-4">
-              <div class="w-12 h-12 bg-amber-500/15 rounded-xl flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
-              </div>
-              <div>
-                <h3 class="text-lg font-bold text-gray-900 mb-1">Exklusives Auto-Storage</h3>
-                <p class="text-gray-600 text-sm">Indoor-Überwinterung für exklusive Fahrzeuge. 225 €/Monat inkl. Strom. Zusätzlich: Auto gelegentlich starten, Batterie prüfen und weiterer Service auf Wunsch.</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -121,19 +220,7 @@ import ourHome from '../assets/images/our_home.jpg';
   <section id="parking" class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-        <div class="order-2 lg:order-1">
-          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
-            <Image 
-              src={ourHome} 
-              alt="Stellplätze für Boot und Camper bei Captain Jack" 
-              class="w-full h-full object-cover"
-              width={800}
-              height={600}
-            />
-          </div>
-        </div>
-
-        <div class="order-1 lg:order-2">
+        <div>
           <p class="text-[#00c2d1] text-sm font-medium tracking-wider uppercase mb-3">Parking</p>
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Stellplätze für Boot & Camper</h2>
           <p class="text-gray-600 text-lg mb-6">
@@ -180,6 +267,18 @@ import ourHome from '../assets/images/our_home.jpg';
             </div>
           </div>
         </div>
+
+        <div>
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+            <Image 
+              src={ourHome} 
+              alt="Stellplätze für Boot und Camper bei Captain Jack" 
+              class="w-full h-full object-cover"
+              width={800}
+              height={600}
+            />
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -193,11 +292,6 @@ import ourHome from '../assets/images/our_home.jpg';
         <p class="text-gray-600 text-lg mb-6">
           Professionelle Wartung, Reparaturen und saisonale Inspektionen — alles vor Ort in Preveza.
         </p>
-        <div class="bg-[#00c2d1]/5 border border-[#00c2d1]/20 rounded-2xl p-6">
-          <p class="text-gray-600 italic">
-            Detaillierte Service-Beschreibungen folgen in Kürze. Kontaktieren Sie uns für individuelle Anfragen.
-          </p>
-        </div>
       </div>
     </div>
   </section>
