@@ -172,9 +172,9 @@ const currentPath = Astro.url.pathname;
     navCta?.classList.toggle('border-white/30', !isScrolled);
     navCta?.classList.toggle('bg-white', !isScrolled);
     navCta?.classList.toggle('text-[#0A2540]', !isScrolled);
-    navCta?.classList.toggle('border-slate-200', isScrolled);
-    navCta?.classList.toggle('bg-white', isScrolled);
-    navCta?.classList.toggle('text-[#0A2540]', isScrolled);
+    navCta?.classList.toggle('border-[#00c2d1]', isScrolled);
+    navCta?.classList.toggle('bg-[#00c2d1]', isScrolled);
+    navCta?.classList.toggle('text-white', isScrolled);
 
     navLinks?.querySelectorAll('a').forEach((link) => {
       if (link.classList.contains('text-[#00c2d1]')) return;
