@@ -80,16 +80,21 @@ import prevezaPromenade from '../assets/images/preveza_promenade.png';
             <p class="mb-3 text-sm font-medium uppercase tracking-wider text-[#00c2d1]">Kontaktformular</p>
             <h3 class="mb-6 text-2xl font-bold text-gray-900">Oder schreiben Sie uns hier</h3>
 
-            <form name="contact" method="POST" data-netlify="true" class="space-y-5">
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-5">
               <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="subject-line" value="Neue Anfrage über captain-jack.pro" />
+              <p class="hidden">
+                <label for="bot-field">Nicht ausfüllen</label>
+                <input id="bot-field" name="bot-field" />
+              </p>
 
               <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
                 <div>
-                  <label for="name" class="mb-1 block text-sm font-medium text-gray-700">Name</label>
+                  <label for="name" class="mb-1 block text-sm font-medium text-gray-700">Name *</label>
                   <input type="text" id="name" name="name" required class="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none transition focus:border-[#00c2d1] focus:ring-1 focus:ring-[#00c2d1]" placeholder="Ihr Name" />
                 </div>
                 <div>
-                  <label for="email" class="mb-1 block text-sm font-medium text-gray-700">E-Mail</label>
+                  <label for="email" class="mb-1 block text-sm font-medium text-gray-700">E-Mail *</label>
                   <input type="email" id="email" name="email" required class="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none transition focus:border-[#00c2d1] focus:ring-1 focus:ring-[#00c2d1]" placeholder="ihre@email.de" />
                 </div>
               </div>
@@ -107,7 +112,7 @@ import prevezaPromenade from '../assets/images/preveza_promenade.png';
               </div>
 
               <div>
-                <label for="message" class="mb-1 block text-sm font-medium text-gray-700">Nachricht</label>
+                <label for="message" class="mb-1 block text-sm font-medium text-gray-700">Nachricht *</label>
                 <textarea id="message" name="message" rows="6" required class="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none transition focus:border-[#00c2d1] focus:ring-1 focus:ring-[#00c2d1]" placeholder="Wobei können wir Ihnen helfen?"></textarea>
               </div>
 

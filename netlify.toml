@@ -48,6 +48,11 @@
   status = 200
 
 [[redirects]]
+  from = "/impressionen"
+  to = "/impressionen/index.html"
+  status = 200
+
+[[redirects]]
   from = "/keelcrab"
   to = "/keelcrab/index.html"
   status = 200

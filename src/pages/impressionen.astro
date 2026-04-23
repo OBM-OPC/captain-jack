@@ -1,0 +1,91 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from 'astro:assets';
+import ourStore from '../assets/images/our_store.jpg';
+import ourStoreAtNight from '../assets/images/our_store_at_night.jpg';
+import ourHome from '../assets/images/our_home.jpg';
+import ourLounge from '../assets/images/our_lounge.jpg';
+import cars from '../assets/images/cars.jpg';
+import captainJackStorageCar from '../assets/images/captain-jack_storage_car.JPG';
+import prevezaPromenade from '../assets/images/preveza_promenade.png';
+import saschaAndGoshia from '../assets/images/sascha_and_goshia_portrait.jpg';
+import saschaWithCaptain from '../assets/images/sascha_with_captain.jpg';
+import captain from '../assets/images/captain.jpg';
+import keelcrabOnBoat from '../assets/images/keelcrab_on_boat.png';
+import keelcrabFrontalSunshine from '../assets/images/keelcrab_frontal_sunshine.png';
+
+const gallery = [
+  { src: ourStoreAtNight, alt: 'Captain Jack Anlage bei Nacht', size: 'lg:col-span-2' },
+  { src: ourStore, alt: 'Captain Jack Standort in Preveza' },
+  { src: ourHome, alt: 'Captain Jack Gelände' },
+  { src: keelcrabOnBoat, alt: 'Keelcrab im Einsatz am Boot' },
+  { src: keelcrabFrontalSunshine, alt: 'Keelcrab frontal im Wasser' },
+  { src: captainJackStorageCar, alt: 'Storage bei Captain Jack' },
+  { src: cars, alt: 'Fahrzeuge bei Captain Jack' },
+  { src: ourLounge, alt: 'Lounge-Bereich bei Captain Jack' },
+  { src: prevezaPromenade, alt: 'Preveza Promenade' },
+  { src: saschaAndGoshia, alt: 'Sascha und Goshia bei Captain Jack' },
+  { src: saschaWithCaptain, alt: 'Sascha mit Captain' },
+  { src: captain, alt: 'Captain Jack Hund' },
+];
+---
+
+<Layout title="Impressionen" description="Impressionen von Captain Jack in Preveza: Standort, Team, Storage und Bootsreinigung in Bildern.">
+  <section class="relative flex min-h-[560px] items-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 text-white">
+    <div class="absolute inset-0 opacity-25">
+      <Image
+        src={ourStoreAtNight}
+        alt="Captain Jack Anlage bei Nacht"
+        width={1600}
+        height={900}
+        class="h-full w-full object-cover"
+      />
+      <div class="absolute inset-0 bg-[#0A2540]/70"></div>
+    </div>
+
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
+      <div class="max-w-3xl text-left">
+        <p class="mb-3 text-sm font-medium uppercase tracking-wider text-[#00c2d1]">Impressionen</p>
+        <h1 class="mb-6 text-4xl font-bold leading-tight md:text-5xl">Einblicke in Captain Jack</h1>
+        <p class="text-lg text-slate-300 md:text-xl">
+          Ein Eindruck von unserem Standort in Preveza, unserem Team und den Bereichen, in denen Storage, Parking und Bootsreinigung stattfinden.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto mb-12 max-w-3xl text-center">
+        <p class="mb-3 text-sm font-medium uppercase tracking-wider text-[#00c2d1]">Galerie</p>
+        <h2 class="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">Standort, Atmosphäre und Technik</h2>
+        <p class="text-lg text-gray-600">So sieht Captain Jack vor Ort aus — persönlich, gepflegt und direkt am Geschehen in Preveza.</p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {gallery.map((item) => (
+          <div class={`overflow-hidden rounded-3xl bg-slate-100 shadow-sm ${item.size ?? ''}`}>
+            <Image
+              src={item.src}
+              alt={item.alt}
+              width={1200}
+              height={900}
+              class="h-full w-full object-cover transition duration-300 hover:scale-[1.02]"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Möchten Sie Captain Jack direkt kennenlernen?</h2>
+      <p class="text-xl text-slate-300 mb-8">Wenn Sie einen persönlichen Eindruck vor Ort gewinnen oder direkt über Ihr Boot sprechen möchten, melden Sie sich bei uns.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/kontakt" class="btn-primary btn-primary-lg">Jetzt Kontakt aufnehmen</a>
+        <a href="/leistungen" class="btn-secondary btn-secondary-lg">Leistungen ansehen</a>
+      </div>
+    </div>
+  </section>
+</Layout>
