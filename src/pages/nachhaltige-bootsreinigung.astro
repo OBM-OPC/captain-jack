@@ -166,7 +166,7 @@ const jobsBenefits = [
           </div>
 
           <div class="mt-8">
-            <h3 class="mb-5 text-2xl font-bold text-[#0A2540]">Warum das sinnvoll ist</h3>
+            <h3 class="mb-5 text-2xl font-bold text-[#0A2540]">Was Raypath hier konkret verbessert</h3>
             <ul class="space-y-4 text-slate-700">
               {raypathBenefits.map((item) => (
                 <li class="flex items-start gap-3">
@@ -194,8 +194,12 @@ const jobsBenefits = [
         <h2 class="text-3xl font-bold text-[#0A2540] md:text-4xl">Regulierung macht nachhaltige Reinigung immer relevanter</h2>
       </div>
 
-      <div class="grid grid-cols-1 gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-16">
-        <div>
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-16">
+        <div class="overflow-hidden rounded-3xl shadow-xl lg:order-1">
+          <Image src={keelcrabUnder} alt="Kontrollierte Unterwasserreinigung mit Keelcrab" width={900} height={700} class="h-full w-full object-cover" />
+        </div>
+
+        <div class="lg:order-2">
           <div class="space-y-4 text-lg leading-relaxed text-slate-600">
             {regulationPoints.map((point) => (
               <p>{point}</p>
@@ -204,7 +208,7 @@ const jobsBenefits = [
           </div>
 
           <div class="mt-8">
-            <h3 class="mb-5 text-2xl font-bold text-[#0A2540]">Warum das sinnvoll ist</h3>
+            <h3 class="mb-5 text-2xl font-bold text-[#0A2540]">Was das für Betreiber einfacher macht</h3>
             <ul class="space-y-4 text-slate-700">
               {regulationBenefits.map((item) => (
                 <li class="flex items-start gap-3">
@@ -216,10 +220,6 @@ const jobsBenefits = [
               ))}
             </ul>
           </div>
-        </div>
-
-        <div class="overflow-hidden rounded-3xl shadow-xl">
-          <Image src={keelcrabUnder} alt="Kontrollierte Unterwasserreinigung mit Keelcrab" width={900} height={700} class="h-full w-full object-cover" />
         </div>
       </div>
     </div>
@@ -241,7 +241,7 @@ const jobsBenefits = [
           </div>
 
           <div class="mt-8">
-            <h3 class="mb-5 text-2xl font-bold text-[#0A2540]">Warum das sinnvoll ist</h3>
+            <h3 class="mb-5 text-2xl font-bold text-[#0A2540]">Worin der langfristige Vorteil liegt</h3>
             <ul class="space-y-4 text-slate-700">
               {futureBenefits.map((item) => (
                 <li class="flex items-start gap-3">
@@ -269,8 +269,12 @@ const jobsBenefits = [
         <h2 class="text-3xl font-bold text-[#0A2540] md:text-4xl">Zukunftsfähige Technik schafft auch bessere Arbeit</h2>
       </div>
 
-      <div class="grid grid-cols-1 gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-16">
-        <div>
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-16">
+        <div class="overflow-hidden rounded-3xl shadow-xl lg:order-1">
+          <Image src={keelcrabBottom} alt="Sauberer Bootsrumpf als Ergebnis nachhaltiger Reinigung" width={900} height={700} class="h-full w-full object-cover" />
+        </div>
+
+        <div class="lg:order-2">
           <div class="space-y-5 text-lg leading-relaxed text-slate-600">
             <p>Wir sind überzeugt: Wer in moderne Reinigungstechnologie investiert, sichert nicht nur saubere Boote, sondern baut zugleich ein professionelleres und stabileres Service-Modell auf. Das ist wichtig für Betriebe, für Mitarbeiter und für die Region.</p>
             <p>Statt veraltete Methoden nur zu verwalten, entstehen mit klaren Prozessen, moderner Technik und wachsender Nachfrage neue Chancen für qualifizierte maritime Dienstleistungen.</p>
@@ -278,7 +282,7 @@ const jobsBenefits = [
           </div>
 
           <div class="mt-8">
-            <h3 class="mb-5 text-2xl font-bold text-[#0A2540]">Warum das sinnvoll ist</h3>
+            <h3 class="mb-5 text-2xl font-bold text-[#0A2540]">Warum das auch wirtschaftlich trägt</h3>
             <ul class="space-y-4 text-slate-700">
               {jobsBenefits.map((item) => (
                 <li class="flex items-start gap-3">
@@ -294,10 +298,6 @@ const jobsBenefits = [
               <p class="mt-3 text-lg font-semibold text-[#0A2540]">Professionelle Reinigung mit Verantwortung – für Boote, Gewässer und die Zukunft des maritimen Service.</p>
             </div>
           </div>
-        </div>
-
-        <div class="overflow-hidden rounded-3xl shadow-xl">
-          <Image src={keelcrabBottom} alt="Sauberer Bootsrumpf als Ergebnis nachhaltiger Reinigung" width={900} height={700} class="h-full w-full object-cover" />
         </div>
       </div>
     </div>
