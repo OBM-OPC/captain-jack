@@ -1,11 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
-import keelcrabOnBoat from "../assets/images/keelcrab_on_boat.png";
 import keelcrabUnder from "../assets/images/keelcrab_under.png";
-import keelcrabBottom from "../assets/images/keelcrab_bottom.webp";
 import keelcrabFrontalSunshine from "../assets/images/keelcrab_frontal_sunshine.png";
-import ourHome from "../assets/images/our_home.jpg";
+import raypath from "../assets/images/raypath.jpg";
+import keelcrabPro from "../assets/images/keelcrab_pro.jpg";
+import keelcrabGreece from "../assets/images/keelcrab_greece.jpg";
+import keelcrabClose from "../assets/images/keelcrab_close.jpg";
 
 const pillars = [
   {
@@ -72,7 +73,7 @@ const jobsBenefits = [
 >
   <section class="relative flex min-h-[560px] items-center overflow-hidden py-20 pt-28 text-white lg:min-h-[560px] lg:py-28 lg:pt-32">
     <div class="absolute inset-0">
-      <Image src={keelcrabOnBoat} alt="Keelcrab im Einsatz am Boot" width={1920} height={900} class="h-full w-full object-cover" />
+      <Image src={keelcrabFrontalSunshine} alt="Keelcrab im Einsatz am Boot" width={1920} height={900} class="h-full w-full object-cover" />
       <div class="absolute inset-0 bg-gradient-to-r from-[#0A2540]/95 via-[#0A2540]/82 to-[#0A2540]/62"></div>
     </div>
 
@@ -125,7 +126,7 @@ const jobsBenefits = [
           <Image src={keelcrabUnder} alt="Keelcrab unter Wasser am Rumpf" width={900} height={650} class="h-full w-full object-cover" />
         </div>
         <div class="overflow-hidden rounded-3xl shadow-xl">
-          <Image src={keelcrabBottom} alt="Sauberer Bootsrumpf nach der Reinigung" width={900} height={500} class="h-full w-full object-cover" />
+          <Image src={keelcrabClose} alt="Keelcrab Technologie Nahaufnahme" width={900} height={500} class="h-full w-full object-cover" />
         </div>
       </div>
 
@@ -181,7 +182,7 @@ const jobsBenefits = [
         </div>
 
         <div class="self-stretch overflow-hidden rounded-3xl shadow-xl min-h-[320px] lg:min-h-full">
-          <Image src={ourHome} alt="Nachhaltige Pflege und saubere Umgebung bei Captain Jack" width={900} height={700} class="h-full min-h-[320px] w-full object-cover lg:min-h-full" />
+          <Image src={raypath} alt="Raypath Produkte für nachhaltige Sauberkeit" width={900} height={700} class="h-full min-h-[320px] w-full object-cover lg:min-h-full" />
         </div>
       </div>
     </div>
@@ -196,7 +197,7 @@ const jobsBenefits = [
 
       <div class="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-16">
         <div class="self-stretch overflow-hidden rounded-3xl shadow-xl min-h-[320px] lg:order-1 lg:min-h-full">
-          <Image src={keelcrabUnder} alt="Kontrollierte Unterwasserreinigung mit Keelcrab" width={900} height={700} class="h-full min-h-[320px] w-full object-cover lg:min-h-full" />
+          <Image src={keelcrabGreece} alt="Keelcrab Reinigung in Griechenland" width={900} height={700} class="h-full min-h-[320px] w-full object-cover lg:min-h-full" />
         </div>
 
         <div class="lg:order-2">
@@ -256,7 +257,7 @@ const jobsBenefits = [
         </div>
 
         <div class="self-stretch overflow-hidden rounded-3xl shadow-xl min-h-[320px] lg:min-h-full">
-          <Image src={keelcrabFrontalSunshine} alt="Zukunftsfähige Bootsreinigung in Preveza" width={900} height={700} class="h-full min-h-[320px] w-full object-cover lg:min-h-full" />
+          <Image src={keelcrabPro} alt="Professionelle Keelcrab Bootsreinigung" width={900} height={700} class="h-full min-h-[320px] w-full object-cover lg:min-h-full" />
         </div>
       </div>
     </div>
@@ -271,7 +272,7 @@ const jobsBenefits = [
 
       <div class="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-16">
         <div class="self-stretch overflow-hidden rounded-3xl shadow-xl min-h-[320px] lg:order-1 lg:min-h-full">
-          <Image src={keelcrabBottom} alt="Sauberer Bootsrumpf als Ergebnis nachhaltiger Reinigung" width={900} height={700} class="h-full min-h-[320px] w-full object-cover lg:min-h-full" />
+          <Image src={keelcrabUnder} alt="Keelcrab Unterwasserreinigung" width={900} height={700} class="h-full min-h-[320px] w-full object-cover lg:min-h-full" />
         </div>
 
         <div class="lg:order-2">
