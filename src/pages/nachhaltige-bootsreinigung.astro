@@ -149,18 +149,20 @@ const jobsBenefits = [
   </section>
 
   <section class="bg-white py-20">
-    <div class="mx-auto max-w-7xl space-y-10 px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-14">
-        <div class="rounded-[2rem] border border-[#28a745]/20 bg-gradient-to-br from-[#28a745]/8 via-white to-[#28a745]/5 p-8 shadow-sm md:p-10">
-          <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-[#28a745]">Raypath</p>
-          <h2 class="mb-5 text-3xl font-bold text-[#0A2540] md:text-4xl">Raypath bekommt bewusst einen eigenen Platz im Konzept</h2>
-          <div class="space-y-4 text-lg leading-relaxed text-slate-600">
-            <p>Raypath ist für uns nicht nur ein Zusatzprodukt, sondern ein klarer Baustein innerhalb eines nachhaltig gedachten Reinigungsprozesses. Wenn wir von moderner Bootsreinigung sprechen, geht es nicht nur um das Unterwasserschiff, sondern um den gesamten Qualitätsanspruch rund um Sauberkeit, Pflege und Werterhalt.</p>
-            <p>Darum bekommt Raypath bei Captain Jack einen eigenen Abschnitt: weil die Produkte unsere Haltung unterstützen — langlebig arbeiten, Ressourcen schonen und sichtbare Ergebnisse liefern.</p>
-          </div>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-12 max-w-3xl">
+        <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-[#28a745]">Raypath</p>
+        <h2 class="text-3xl font-bold text-[#0A2540] md:text-4xl">Raypath bekommt bewusst einen eigenen Platz im Konzept</h2>
+      </div>
+
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-16">
+        <div class="space-y-5 text-lg leading-relaxed text-slate-600">
+          <p>Raypath ist für uns nicht nur ein Zusatzprodukt, sondern ein klarer Baustein innerhalb eines nachhaltig gedachten Reinigungsprozesses. Wenn wir von moderner Bootsreinigung sprechen, geht es nicht nur um das Unterwasserschiff, sondern um den gesamten Qualitätsanspruch rund um Sauberkeit, Pflege und Werterhalt.</p>
+          <p>Darum bekommt Raypath bei Captain Jack einen eigenen Abschnitt: weil die Produkte unsere Haltung unterstützen — langlebig arbeiten, Ressourcen schonen und sichtbare Ergebnisse liefern.</p>
+          <p>So entsteht ein stimmiges Gesamtbild: moderne Technik im Wasser, saubere ergänzende Prozesse an Bord und ein klarer Qualitätsanspruch, der auf der ganzen Seite nachvollziehbar wird.</p>
         </div>
 
-        <div class="rounded-3xl border border-[#28a745]/20 bg-white p-8 shadow-sm">
+        <div>
           <h3 class="mb-5 text-2xl font-bold text-[#0A2540]">Benefits von Raypath</h3>
           <ul class="space-y-4 text-slate-700">
             {raypathBenefits.map((item) => (
@@ -174,20 +176,30 @@ const jobsBenefits = [
           </ul>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-14">
-        <div class="rounded-3xl bg-[#0A2540] p-8 text-white md:p-10">
-          <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-[#00c2d1]">Regulierung</p>
-          <h2 class="mb-6 text-3xl font-bold md:text-4xl">Regulierung macht nachhaltige Reinigung immer relevanter</h2>
-          <div class="space-y-4 text-slate-300">
-            {regulationPoints.map((point) => (
-              <p>{point}</p>
-            ))}
-          </div>
-          <ul class="mt-8 space-y-3 text-slate-200">
+  <section class="bg-slate-50 py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-12 max-w-3xl">
+        <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-[#00c2d1]">Regulierung</p>
+        <h2 class="text-3xl font-bold text-[#0A2540] md:text-4xl">Regulierung macht nachhaltige Reinigung immer relevanter</h2>
+      </div>
+
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-16">
+        <div class="space-y-4 text-lg leading-relaxed text-slate-600">
+          {regulationPoints.map((point) => (
+            <p>{point}</p>
+          ))}
+          <p>Wer hier früh auf saubere, kontrollierbare Verfahren setzt, ist kommunikativ und operativ deutlich besser aufgestellt — gegenüber Kunden, Partnern und künftigen Anforderungen im Markt.</p>
+        </div>
+
+        <div>
+          <h3 class="mb-5 text-2xl font-bold text-[#0A2540]">Benefits durch frühzeitige Anpassung</h3>
+          <ul class="space-y-4 text-slate-700">
             {regulationBenefits.map((item) => (
               <li class="flex items-start gap-3">
-                <span class="mt-1 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#00c2d1] text-[#0A2540]">
+                <span class="mt-1 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#00c2d1] text-white">
                   <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
                 </span>
                 <span>{item}</span>
@@ -195,15 +207,27 @@ const jobsBenefits = [
             ))}
           </ul>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="rounded-3xl border border-slate-200 bg-slate-50 p-8 md:p-10">
-          <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-[#00c2d1]">Zukunft</p>
-          <h2 class="mb-5 text-3xl font-bold text-[#0A2540] md:text-4xl">Wer heute umdenkt, ist morgen klar im Vorteil</h2>
-          <div class="space-y-4 leading-relaxed text-slate-600">
-            <p>Nachhaltige Reinigung ist kein kurzfristiger Trend. Sie wird zur Erwartung — bei Eignern, bei professionellen Flotten und bei Standorten, die ihren Qualitätsstandard sichtbar nach außen tragen wollen.</p>
-            <p>Mit Keelcrab und einem durchdachten Gesamtkonzept positioniert sich Captain Jack frühzeitig in einem Bereich, der in den nächsten Jahren deutlich an Bedeutung gewinnen wird.</p>
-          </div>
-          <ul class="mt-8 space-y-3 text-slate-700">
+  <section class="bg-white py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-12 max-w-3xl">
+        <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-[#00c2d1]">Zukunft</p>
+        <h2 class="text-3xl font-bold text-[#0A2540] md:text-4xl">Wer heute umdenkt, ist morgen klar im Vorteil</h2>
+      </div>
+
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-16">
+        <div class="space-y-5 text-lg leading-relaxed text-slate-600">
+          <p>Nachhaltige Reinigung ist kein kurzfristiger Trend. Sie wird zur Erwartung — bei Eignern, bei professionellen Flotten und bei Standorten, die ihren Qualitätsstandard sichtbar nach außen tragen wollen.</p>
+          <p>Mit Keelcrab und einem durchdachten Gesamtkonzept positioniert sich Captain Jack frühzeitig in einem Bereich, der in den nächsten Jahren deutlich an Bedeutung gewinnen wird.</p>
+          <p>Das schafft Vertrauen, hebt den Betrieb vom Wettbewerb ab und macht die Leistung auch langfristig wirtschaftlich interessant.</p>
+        </div>
+
+        <div>
+          <h3 class="mb-5 text-2xl font-bold text-[#0A2540]">Benefits für die Zukunft</h3>
+          <ul class="space-y-4 text-slate-700">
             {futureBenefits.map((item) => (
               <li class="flex items-start gap-3">
                 <span class="mt-1 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white">
@@ -215,34 +239,38 @@ const jobsBenefits = [
           </ul>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm md:p-10">
-        <div class="grid grid-cols-1 gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-14">
-          <div>
-            <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-[#00c2d1]">Arbeitsplätze</p>
-            <h2 class="mb-5 text-3xl font-bold text-[#0A2540] md:text-4xl">Zukunftsfähige Technik schafft auch bessere Arbeit</h2>
-            <div class="space-y-4 leading-relaxed text-slate-600">
-              <p>Wir sind überzeugt: Wer in moderne Reinigungstechnologie investiert, sichert nicht nur saubere Boote, sondern baut zugleich ein professionelleres und stabileres Service-Modell auf. Das ist wichtig für Betriebe, für Mitarbeiter und für die Region.</p>
-              <p>Statt veraltete Methoden nur zu verwalten, entstehen mit klaren Prozessen, moderner Technik und wachsender Nachfrage neue Chancen für qualifizierte maritime Dienstleistungen.</p>
-            </div>
-          </div>
+  <section class="bg-slate-50 py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-12 max-w-3xl">
+        <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-[#00c2d1]">Arbeitsplätze</p>
+        <h2 class="text-3xl font-bold text-[#0A2540] md:text-4xl">Zukunftsfähige Technik schafft auch bessere Arbeit</h2>
+      </div>
 
-          <div>
-            <h3 class="mb-5 text-2xl font-bold text-[#0A2540]">Benefits für Arbeitsplätze und Betrieb</h3>
-            <ul class="space-y-4 text-slate-700">
-              {jobsBenefits.map((item) => (
-                <li class="flex items-start gap-3">
-                  <span class="mt-1 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#00c2d1] text-white">
-                    <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
-                  </span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-            <div class="mt-8 rounded-2xl border border-[#00c2d1]/20 bg-slate-50 p-6">
-              <p class="text-sm font-medium uppercase tracking-[0.18em] text-[#00c2d1]">Captain Jack Anspruch</p>
-              <p class="mt-3 text-lg font-semibold text-[#0A2540]">Professionelle Reinigung mit Verantwortung – für Boote, Gewässer und die Zukunft des maritimen Service.</p>
-            </div>
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-16">
+        <div class="space-y-5 text-lg leading-relaxed text-slate-600">
+          <p>Wir sind überzeugt: Wer in moderne Reinigungstechnologie investiert, sichert nicht nur saubere Boote, sondern baut zugleich ein professionelleres und stabileres Service-Modell auf. Das ist wichtig für Betriebe, für Mitarbeiter und für die Region.</p>
+          <p>Statt veraltete Methoden nur zu verwalten, entstehen mit klaren Prozessen, moderner Technik und wachsender Nachfrage neue Chancen für qualifizierte maritime Dienstleistungen.</p>
+          <p>So wird Nachhaltigkeit nicht nur zum Umweltargument, sondern auch zu einer echten wirtschaftlichen Perspektive für Menschen, die in diesem Bereich arbeiten.</p>
+        </div>
+
+        <div>
+          <h3 class="mb-5 text-2xl font-bold text-[#0A2540]">Benefits für Arbeitsplätze und Betrieb</h3>
+          <ul class="space-y-4 text-slate-700">
+            {jobsBenefits.map((item) => (
+              <li class="flex items-start gap-3">
+                <span class="mt-1 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#00c2d1] text-white">
+                  <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
+                </span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          <div class="mt-8 rounded-2xl border border-[#00c2d1]/20 bg-white p-6">
+            <p class="text-sm font-medium uppercase tracking-[0.18em] text-[#00c2d1]">Captain Jack Anspruch</p>
+            <p class="mt-3 text-lg font-semibold text-[#0A2540]">Professionelle Reinigung mit Verantwortung – für Boote, Gewässer und die Zukunft des maritimen Service.</p>
           </div>
         </div>
       </div>
