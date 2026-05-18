@@ -4,6 +4,8 @@ import { Image } from 'astro:assets';
 import captainJackStorageCar from '../assets/images/captain-jack_storage_car.JPG';
 import ourHome from '../assets/images/our_home.jpg';
 import parkingImage from '../assets/images/parking.jpg';
+import captainJackParking from '../assets/images/captain_jack_parking.jpeg';
+import captainJackParkingLot from '../assets/images/captain_jack_parkinglot.jpeg';
 import keelcrabOnBoat from '../assets/images/keelcrab_on_boat.png';
 import keelcrabGreece from '../assets/images/keelcrab_greece.jpg';
 ---
@@ -291,6 +293,27 @@ import keelcrabGreece from '../assets/images/keelcrab_greece.jpg';
               width={800}
               height={600}
             />
+          </div>
+
+          <div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+            <div class="aspect-[4/3] overflow-hidden rounded-2xl shadow-lg">
+              <Image
+                src={captainJackParking}
+                alt="Parkingbereich bei Captain Jack in Preveza"
+                class="h-full w-full object-cover"
+                width={800}
+                height={600}
+              />
+            </div>
+            <div class="aspect-[4/3] overflow-hidden rounded-2xl shadow-lg">
+              <Image
+                src={captainJackParkingLot}
+                alt="Parkingfläche von Captain Jack in Preveza"
+                class="h-full w-full object-cover"
+                width={800}
+                height={600}
+              />
+            </div>
           </div>
         </div>
       </div>
