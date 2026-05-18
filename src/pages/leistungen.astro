@@ -380,8 +380,6 @@ import keelcrabGreece from '../assets/images/keelcrab_greece.jpg';
   if (mainImage && thumbs.length) {
     const defaultSrc = mainImage.getAttribute('src');
     const defaultAlt = mainImage.getAttribute('alt');
-    let lockedSrc = defaultSrc;
-    let lockedAlt = defaultAlt;
 
     const setMainImage = (src, alt) => {
       if (!src) return;
@@ -395,13 +393,9 @@ import keelcrabGreece from '../assets/images/keelcrab_greece.jpg';
 
       thumb.addEventListener('mouseenter', () => setMainImage(src, alt));
       thumb.addEventListener('focus', () => setMainImage(src, alt));
-      thumb.addEventListener('mouseleave', () => setMainImage(lockedSrc, lockedAlt));
-      thumb.addEventListener('blur', () => setMainImage(lockedSrc, lockedAlt));
-      thumb.addEventListener('click', () => {
-        lockedSrc = src || defaultSrc;
-        lockedAlt = alt || defaultAlt;
-        setMainImage(lockedSrc, lockedAlt);
-      });
+      thumb.addEventListener('mouseleave', () => setMainImage(defaultSrc, defaultAlt));
+      thumb.addEventListener('blur', () => setMainImage(defaultSrc, defaultAlt));
+      thumb.addEventListener('click', () => setMainImage(defaultSrc, defaultAlt));
     });
   }
 </script>
