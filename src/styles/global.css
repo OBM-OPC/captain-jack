@@ -62,21 +62,21 @@ a {
 .hero-gold-label {
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(255, 231, 150, 0.55);
-  background: linear-gradient(135deg, rgba(255, 227, 112, 0.95), rgba(214, 159, 39, 0.96));
-  color: #4f3200;
+  border: 1px solid rgba(248, 216, 120, 0.38);
+  background: linear-gradient(135deg, rgba(246, 217, 126, 0.9), rgba(201, 150, 47, 0.88));
+  color: #5a3a07;
   box-shadow:
-    0 10px 30px rgba(214, 159, 39, 0.2),
-    inset 0 1px 0 rgba(255, 249, 219, 0.7);
+    0 8px 22px rgba(179, 128, 31, 0.14),
+    inset 0 1px 0 rgba(255, 248, 218, 0.55);
 }
 
 .hero-gold-label::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(115deg, transparent 20%, rgba(255, 255, 255, 0.18) 42%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0.18) 58%, transparent 80%);
+  background: linear-gradient(115deg, transparent 24%, rgba(255, 255, 255, 0.1) 44%, rgba(255, 255, 255, 0.45) 50%, rgba(255, 255, 255, 0.1) 56%, transparent 76%);
   transform: translateX(-140%);
-  animation: hero-gold-shine 3.4s ease-in-out infinite;
+  animation: hero-gold-shine 4.8s ease-in-out infinite;
 }
 
 @keyframes hero-gold-shine {
