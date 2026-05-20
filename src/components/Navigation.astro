@@ -31,7 +31,7 @@ const currentPath = Astro.url.pathname;
         <span id="nav-brand" class="text-[1.7rem] font-bold tracking-wide text-white transition-all duration-300 lg:text-[1.95rem]">Captain Jack</span>
       </a>
 
-      <div id="nav-links" class="hidden items-center gap-8 md:flex">
+      <div id="nav-links" class="hidden items-center gap-8 lg:flex">
         {navLinks.map((link) => (
           <a 
             href={link.href} 
@@ -49,7 +49,7 @@ const currentPath = Astro.url.pathname;
 
       <button 
         id="mobile-menu-btn" 
-        class="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-white/20 bg-white/10 text-white shadow-sm backdrop-blur-sm transition-all duration-300 hover:bg-white/15 md:hidden" 
+        class="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-white/20 bg-white/10 text-white shadow-sm backdrop-blur-sm transition-all duration-300 hover:bg-white/15 lg:hidden" 
         aria-label="Menü öffnen"
         aria-expanded="false"
         aria-controls="mobile-menu"
@@ -63,7 +63,7 @@ const currentPath = Astro.url.pathname;
       </button>
     </div>
 
-    <div id="mobile-menu" class="fixed inset-0 z-[60] hidden md:hidden">
+    <div id="mobile-menu" class="fixed inset-0 z-[60] hidden lg:hidden">
       <div class="flex min-h-screen flex-col overflow-y-auto bg-white">
         <div class="border-b border-slate-100 bg-gradient-to-r from-[#0A2540] to-slate-800 px-5 pb-5 pt-28 text-white">
           <p class="text-lg font-semibold">Navigation</p>
@@ -182,7 +182,7 @@ const currentPath = Astro.url.pathname;
   });
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth >= 768) syncMenuState(false);
+    if (window.innerWidth >= 1024) syncMenuState(false);
   });
 
   setScrolledState();
