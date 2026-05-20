@@ -4,10 +4,12 @@ import { Image } from "astro:assets";
 import keelcrabUnder from "../assets/images/keelcrab_under.png";
 import keelcrabFrontalSunshine from "../assets/images/keelcrab_frontal_sunshine.png";
 import raypath from "../assets/images/raypath.jpg";
+import raypathLogo from "../assets/images/raypath-logo.svg";
 import keelcrabPro from "../assets/images/keelcrab_pro.jpg";
 import keelcrabGreece from "../assets/images/keelcrab_greece.jpg";
 import keelcrabClose from "../assets/images/keelcrab_close.jpg";
 import sustainability from "../assets/images/sustainability.jpeg";
+import raypathNanotechnology from "../assets/images/raypath_nanotechnology.jpg";
 
 const pillars = [
   {
@@ -44,6 +46,13 @@ const raypathBenefits = [
   "Langlebige Produkte statt kurzfristiger Wegwerf-Lösungen.",
   "Sauberkeit, die zur nachhaltigen Positionierung passt.",
   "Eine starke Ergänzung zum Keelcrab-Konzept.",
+];
+
+const nanoBenefits = [
+  "Mikrofasern mit sehr feiner Struktur, in denen sich Schmutz gezielt aufnehmen und beim Auswaschen wieder lösen kann.",
+  "Einsatz mit sauberem Wasser und ohne Kontakt zu klassischen chemischen Reinigern.",
+  "Nanosilber-Technologie als zusätzlicher technischer Baustein innerhalb des Systems.",
+  "Passende Ergänzung zu unserer kontrollierten Keelcrab-Reinigung rund ums Boot.",
 ];
 
 const regulationBenefits = [
@@ -158,6 +167,10 @@ const jobsBenefits = [
 
       <div class="grid grid-cols-1 gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-16">
         <div>
+          <div class="mb-8 inline-flex rounded-2xl border border-slate-200 bg-white px-6 py-4 shadow-sm">
+            <img src={raypathLogo.src} alt="Raypath Logo" class="h-10 w-auto" loading="lazy" />
+          </div>
+
           <div class="space-y-5 text-lg leading-relaxed text-slate-600">
             <p>Raypath ist für uns nicht nur ein Zusatzprodukt, sondern ein klarer Baustein innerhalb eines nachhaltig gedachten Reinigungsprozesses. Wenn wir von moderner Bootsreinigung sprechen, geht es nicht nur um das Unterwasserschiff, sondern um den gesamten Qualitätsanspruch rund um Sauberkeit, Pflege und Werterhalt.</p>
             <p>Darum bekommt Raypath bei Captain Jack einen eigenen Abschnitt: weil die Produkte unsere Haltung unterstützen — langlebig arbeiten, Ressourcen schonen und sichtbare Ergebnisse liefern.</p>
@@ -181,6 +194,50 @@ const jobsBenefits = [
 
         <div class="self-stretch overflow-hidden rounded-3xl shadow-xl min-h-[320px] lg:min-h-full">
           <Image src={raypath} alt="Raypath Produkte für nachhaltige Sauberkeit" width={900} height={700} class="h-full min-h-[320px] w-full object-cover lg:min-h-full" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="relative overflow-hidden py-20">
+    <div class="absolute inset-0">
+      <Image
+        src={raypathNanotechnology}
+        alt="Raypath Nanotechnology als Ergänzung zur nachhaltigen Reinigung"
+        width={1920}
+        height={725}
+        class="h-full w-full object-cover"
+      />
+      <div class="absolute inset-0 bg-[#0A2540]/78"></div>
+    </div>
+
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-12 max-w-3xl">
+        <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-[#7ee081]">Nanotechnologie</p>
+        <h2 class="text-3xl font-bold text-white md:text-4xl">Wie Raypath-Nanotechnologie unsere Reinigung ergänzt</h2>
+      </div>
+
+      <div class="max-w-4xl rounded-[2rem] border border-white/10 bg-white/92 p-8 shadow-2xl backdrop-blur-sm md:p-10">
+        <div>
+          <div class="space-y-5 text-lg leading-relaxed text-slate-700">
+            <p>Der entscheidende Punkt an der Raypath-Nanotechnologie ist die Struktur der Reinigungstextilien selbst. Laut Raypath basiert das System auf Mikrofasern von rund 20 Mikrometern Stärke, deren Profil Schmutz aufnehmen, konzentrieren und beim Auswaschen wieder freigeben kann, ohne ihn einfach nur weiter über die Oberfläche zu verteilen.</p>
+            <p>Dazu kommt der Einsatz mit sauberem Wasser und ohne Kontakt zu klassischen chemischen Reinigern. Genau das ist für uns relevant, weil diese Technologie unsere Linie in der Bootsreinigung sinnvoll ergänzt: kontrollierte Arbeit mit Keelcrab im Wasser und ergänzende Oberflächenreinigung mit einem material- und prozessorientierten System.</p>
+            <p>Raypath beschreibt außerdem eingebrachte Silberpartikel als Teil des Systems. Für Captain Jack ist daran vor allem der technologische Ansatz wichtig: nicht einfach irgendein Reinigungstuch, sondern ein aufgebautes Mikrofasersystem mit klarer Funktionslogik, das zu unserem Anspruch an moderne Reinigung passt.</p>
+          </div>
+
+          <div class="mt-8">
+            <h3 class="mb-5 text-2xl font-bold text-[#0A2540]">Warum diese Technologie zu unserem Ansatz passt</h3>
+            <ul class="space-y-4 text-slate-700">
+              {nanoBenefits.map((item) => (
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#28a745] text-white">
+                    <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
+                  </span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>

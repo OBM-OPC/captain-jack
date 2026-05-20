@@ -4,6 +4,8 @@ import { Image } from 'astro:assets';
 import captainJackStorageCar from '../assets/images/captain-jack_storage_car.JPG';
 import ourHome from '../assets/images/our_home.jpg';
 import parkingImage from '../assets/images/parking.jpg';
+import captainJackParking from '../assets/images/captain_jack_parking.jpeg';
+import captainJackParkingLot from '../assets/images/captain_jack_parkinglot.jpeg';
 import keelcrabOnBoat from '../assets/images/keelcrab_on_boat.png';
 import keelcrabGreece from '../assets/images/keelcrab_greece.jpg';
 ---
@@ -31,30 +33,6 @@ import keelcrabGreece from '../assets/images/keelcrab_greece.jpg';
         <p class="text-lg text-slate-300 mb-8 max-w-2xl">Storage, Parking, Service und Keelcrab® — alles, was Ihr Boot braucht und Sie brauchen, direkt vor Ort in Preveza.</p>
         
         <!-- Benefits -->
-      </div>
-    </div>
-  </section>
-
-  <section class="bg-white py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
-        <a href="/nachhaltige-bootsreinigung" class="group rounded-3xl border border-slate-200 bg-slate-50 p-8 transition duration-300 hover:-translate-y-1 hover:border-[#00c2d1]/40 hover:shadow-lg">
-          <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-[#00c2d1]">Neue Seite</p>
-          <h2 class="mb-3 text-2xl font-bold text-[#0A2540]">Nachhaltige Bootsreinigung</h2>
-          <p class="text-slate-600">Erfahren Sie mehr über Keelcrab, Mikroplastik-Filterung, Raypath-Produkte und warum moderne Reinigung heute auch Verantwortung bedeutet.</p>
-          <span class="mt-5 inline-flex items-center gap-2 font-semibold text-[#0A2540] group-hover:text-[#00c2d1]">Mehr erfahren
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-          </span>
-        </a>
-
-        <a href="/charterflotten-marinas" class="group rounded-3xl border border-slate-200 bg-slate-50 p-8 transition duration-300 hover:-translate-y-1 hover:border-[#00c2d1]/40 hover:shadow-lg">
-          <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-[#00c2d1]">Neue Seite</p>
-          <h2 class="mb-3 text-2xl font-bold text-[#0A2540]">Für Charterflotten & Marinas</h2>
-          <p class="text-slate-600">B2B-orientierte Inhalte für Charterunternehmen und Marinas – mit Fokus auf Verfügbarkeit, planbare Prozesse und wirtschaftliche Flottenpflege.</p>
-          <span class="mt-5 inline-flex items-center gap-2 font-semibold text-[#0A2540] group-hover:text-[#00c2d1]">Mehr erfahren
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-          </span>
-        </a>
       </div>
     </div>
   </section>
@@ -280,17 +258,50 @@ import keelcrabGreece from '../assets/images/keelcrab_greece.jpg';
             <h3 class="text-lg font-bold text-gray-900">Parking & Preise</h3>
             <p class="text-gray-600">Preise für Stellplätze veröffentlichen wir bewusst nicht pauschal auf der Website. Je nach Fläche, Fahrzeug, Bootslänge und gewünschter Dauer machen wir Ihnen ein passendes Angebot.</p>
           </div>
+
         </div>
 
         <div>
           <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
-            <Image 
-              src={parkingImage} 
-              alt="Parkingflächen für Boote bei Captain Jack in Preveza" 
-              class="w-full h-full object-cover"
-              width={800}
-              height={600}
+            <img
+              id="parking-main-image"
+              src={parkingImage.src}
+              alt="Parkingflächen für Boote bei Captain Jack in Preveza"
+              width={parkingImage.width}
+              height={parkingImage.height}
+              class="h-full w-full object-cover"
             />
+          </div>
+
+          <div class="mt-8 grid grid-cols-2 gap-6">
+            <button
+              type="button"
+              class="parking-thumb aspect-[4/3] overflow-hidden rounded-2xl shadow-lg ring-2 ring-transparent transition hover:ring-[#00c2d1]"
+              data-src={captainJackParking.src}
+              data-alt="Parkingbereich bei Captain Jack in Preveza"
+            >
+              <img
+                src={captainJackParking.src}
+                alt="Parkingbereich bei Captain Jack in Preveza"
+                width={captainJackParking.width}
+                height={captainJackParking.height}
+                class="h-full w-full object-cover"
+              />
+            </button>
+            <button
+              type="button"
+              class="parking-thumb aspect-[4/3] overflow-hidden rounded-2xl shadow-lg ring-2 ring-transparent transition hover:ring-[#00c2d1]"
+              data-src={captainJackParkingLot.src}
+              data-alt="Parkingfläche von Captain Jack in Preveza"
+            >
+              <img
+                src={captainJackParkingLot.src}
+                alt="Parkingfläche von Captain Jack in Preveza"
+                width={captainJackParkingLot.width}
+                height={captainJackParkingLot.height}
+                class="h-full w-full object-cover"
+              />
+            </button>
           </div>
         </div>
       </div>
@@ -337,3 +348,30 @@ import keelcrabGreece from '../assets/images/keelcrab_greece.jpg';
   </section>
 
 </Layout>
+
+<script>
+  const mainImage = document.getElementById('parking-main-image');
+  const thumbs = document.querySelectorAll('.parking-thumb');
+
+  if (mainImage && thumbs.length) {
+    const defaultSrc = mainImage.getAttribute('src');
+    const defaultAlt = mainImage.getAttribute('alt');
+
+    const setMainImage = (src, alt) => {
+      if (!src) return;
+      mainImage.setAttribute('src', src);
+      if (alt) mainImage.setAttribute('alt', alt);
+    };
+
+    thumbs.forEach((thumb) => {
+      const src = thumb.getAttribute('data-src');
+      const alt = thumb.getAttribute('data-alt');
+
+      thumb.addEventListener('mouseenter', () => setMainImage(src, alt));
+      thumb.addEventListener('focus', () => setMainImage(src, alt));
+      thumb.addEventListener('mouseleave', () => setMainImage(defaultSrc, defaultAlt));
+      thumb.addEventListener('blur', () => setMainImage(defaultSrc, defaultAlt));
+      thumb.addEventListener('click', () => setMainImage(defaultSrc, defaultAlt));
+    });
+  }
+</script>
