@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 import keelcrabUnder from "../assets/images/keelcrab_under.png";
 import keelcrabFrontalSunshine from "../assets/images/keelcrab_frontal_sunshine.png";
 import raypath from "../assets/images/raypath.jpg";
+import raypathLogo from "../assets/images/raypath-logo.svg";
 import keelcrabPro from "../assets/images/keelcrab_pro.jpg";
 import keelcrabGreece from "../assets/images/keelcrab_greece.jpg";
 import keelcrabClose from "../assets/images/keelcrab_close.jpg";
@@ -166,6 +167,10 @@ const jobsBenefits = [
 
       <div class="grid grid-cols-1 gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-16">
         <div>
+          <div class="mb-8 inline-flex rounded-2xl border border-slate-200 bg-white px-6 py-4 shadow-sm">
+            <img src={raypathLogo.src} alt="Raypath Logo" class="h-10 w-auto" loading="lazy" />
+          </div>
+
           <div class="space-y-5 text-lg leading-relaxed text-slate-600">
             <p>Raypath ist für uns nicht nur ein Zusatzprodukt, sondern ein klarer Baustein innerhalb eines nachhaltig gedachten Reinigungsprozesses. Wenn wir von moderner Bootsreinigung sprechen, geht es nicht nur um das Unterwasserschiff, sondern um den gesamten Qualitätsanspruch rund um Sauberkeit, Pflege und Werterhalt.</p>
             <p>Darum bekommt Raypath bei Captain Jack einen eigenen Abschnitt: weil die Produkte unsere Haltung unterstützen — langlebig arbeiten, Ressourcen schonen und sichtbare Ergebnisse liefern.</p>
