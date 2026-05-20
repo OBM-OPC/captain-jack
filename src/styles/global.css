@@ -58,3 +58,35 @@ a {
 .link-muted {
   @apply font-medium text-gray-500 transition-colors duration-150 hover:text-gray-900;
 }
+
+.hero-gold-label {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 231, 150, 0.55);
+  background: linear-gradient(135deg, rgba(255, 227, 112, 0.95), rgba(214, 159, 39, 0.96));
+  color: #4f3200;
+  box-shadow:
+    0 10px 30px rgba(214, 159, 39, 0.2),
+    inset 0 1px 0 rgba(255, 249, 219, 0.7);
+}
+
+.hero-gold-label::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 20%, rgba(255, 255, 255, 0.18) 42%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0.18) 58%, transparent 80%);
+  transform: translateX(-140%);
+  animation: hero-gold-shine 3.4s ease-in-out infinite;
+}
+
+@keyframes hero-gold-shine {
+  0% {
+    transform: translateX(-140%);
+  }
+  55% {
+    transform: translateX(140%);
+  }
+  100% {
+    transform: translateX(140%);
+  }
+}
