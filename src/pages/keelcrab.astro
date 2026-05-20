@@ -4,11 +4,11 @@ import { Image } from "astro:assets";
 import keelcrabFront from "../assets/images/keelcrab_front.png";
 import keelcrabOnBoat from "../assets/images/keelcrab_on_boat.png";
 import keelcrabUnder from "../assets/images/keelcrab_under.png";
-import keelcrabFrontal from "../assets/images/keelcrab_frontal.png";
 import keelcrabFrontalSunshine from "../assets/images/keelcrab_frontal_sunshine.png";
-import keelcrabBottom from "../assets/images/keelcrab_bottom.webp";
-import keelcrabDirty from "../assets/images/keelcrab_dirty.png";
-import keelcrabFrontalFast from "../assets/images/keelcrab_frontal_fast.png";
+import keelcrabClose from "../assets/images/keelcrab_close.jpg";
+import keelcrabController from "../assets/images/keelcrab_controller.jpg";
+import keelcrabGreece from "../assets/images/keelcrab_greece.jpg";
+import keelcrabPro from "../assets/images/keelcrab_pro.jpg";
 
 const benefits = [
   {
@@ -212,39 +212,50 @@ const audiences = [
           />
         </div>
 
-        <!-- Vor der Reinigung -->
-        <div class="overflow-hidden rounded-2xl shadow-lg">
-          <Image
-            src={keelcrabDirty}
-            alt="Bootsrumpf vor der Keelcrab-Reinigung"
-            width={400}
-            height={400}
-            class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-          />
-        </div>
-
-        <!-- Frontal -->
-        <!-- Bild entfernt: keelcrab_frontal.png -->
-
-        <!-- Schnelle Reinigung -->
-        <!-- Bild entfernt: keelcrab_frontal_fast.png -->
-
-        <!-- In der Sonne -->
         <div class="overflow-hidden rounded-2xl shadow-lg">
           <Image
             src={keelcrabFrontalSunshine}
-            alt="Keelcrab in der Sonne"
+            alt="Keelcrab frontal im Sonnenlicht"
             width={400}
             height={400}
             class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
           />
         </div>
 
-        <!-- Unten breit: on_boat -->
+        <div class="overflow-hidden rounded-2xl shadow-lg">
+          <Image
+            src={keelcrabClose}
+            alt="Keelcrab Nahaufnahme"
+            width={400}
+            height={400}
+            class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+          />
+        </div>
+
         <div class="md:col-span-2 overflow-hidden rounded-2xl shadow-lg">
           <Image
-            src={keelcrabOnBoat}
-            alt="Keelcrab am Boot im Einsatz"
+            src={keelcrabController}
+            alt="Keelcrab Controller im Einsatz"
+            width={800}
+            height={400}
+            class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+          />
+        </div>
+
+        <div class="overflow-hidden rounded-2xl shadow-lg">
+          <Image
+            src={keelcrabGreece}
+            alt="Keelcrab in Griechenland im Einsatz"
+            width={400}
+            height={400}
+            class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+          />
+        </div>
+
+        <div class="md:col-span-2 overflow-hidden rounded-2xl shadow-lg">
+          <Image
+            src={keelcrabPro}
+            alt="Keelcrab Pro im Einsatz"
             width={800}
             height={400}
             class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
@@ -287,8 +298,8 @@ const audiences = [
         <div class="order-1 lg:order-2">
           <div class="overflow-hidden rounded-[2rem] shadow-xl ring-1 ring-slate-200">
             <Image
-              src={keelcrabFrontalFast}
-              alt="Keelcrab frontal im Einsatz"
+              src={keelcrabClose}
+              alt="Keelcrab Nahaufnahme"
               width={1200}
               height={900}
               class="h-full w-full object-cover"
